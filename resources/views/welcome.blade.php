@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Welkom bij Klus Hulp Twente
                 </div>
 
                 <div class="links">
