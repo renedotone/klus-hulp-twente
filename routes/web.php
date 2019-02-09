@@ -18,4 +18,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/klusvraagplaatsen', 'klusvraagplaatsenController@index')->name('klusvraagplaatsen')->middleware('auth');
+Route::get('/jobs', 'JobsController@index')->name('jobs');
+Route::post('/jobs', 'JobsController@store')->name('jobs');
+Route::get('/addingjobs', 'AddingJobsController@index')->name('jobs')->middleware('auth');
