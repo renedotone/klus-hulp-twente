@@ -4,6 +4,7 @@
         <li>{{ $job->naam_plaatser }}</li>
         <li>{{ $job->type_hulpvraag }}</li>
         <li>{{ $job->beschrijving_hulpvraag }}</li>
+        <li>{{ $job->email_plaatser }}</li>
         <br>
     @endforeach
 </html>

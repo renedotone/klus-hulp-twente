@@ -39,6 +39,8 @@ class JobsController extends Controller
         $jobs = new Jobs();
 
         $jobs->naam_plaatser = auth()->user()->name;
+        $jobs->id_plaatser = auth()->user()->id;
+        $jobs->email_plaatser = auth()->user()->email;
         $jobs->type_hulpvraag = request('type_hulpvraag');
         $jobs->beschrijving_hulpvraag = request('beschrijving_hulpvraag');
 
