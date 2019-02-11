@@ -4,18 +4,44 @@
 
 @section('content')
 
-<h1>Lijst van klussen</h1>
-    @foreach ($jobs as $job)
-        <li>Naam van de plaatser:{{ $job->naam_plaatser }}</li>
-        <li>Type hulpvraag:{{ $job->type_hulpvraag }}</li>
-        <li>Beschrijving hulpvraag:{{ $job->beschrijving_hulpvraag }}</li>
-        <li>Email vrager:{{ $job->email_plaatser }}</li>
-        <li>Adres vrager:{{ $job->adres_plaatser }}</li>
-        <li>Postcode vrager:{{ $job->postcode_plaatser }}</li>
-        <li>Gemeente vrager:{{ $job->gemeente_plaatser }}</li>
-        <li>Telefoonnummer vrager:{{ $job->telefoonnummer_plaatser }}</li>
-        <a href="/jobdetail">Details</a>
-        <br><br>
-    @endforeach
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm m-5">
+            <div class="table-responsive">
+                <table class="table table-dark table-hover">
+                    <thead>
+                    <tr>
+                        <th scope="col">Naam van de plaatser</th>
+                        <th scope="col">Type hulpvraag</th>
+                        <th scope="col">Beschrijving hulpvraag</th>
+                        <th scope="col">Email vrager</th>
+                        <th scope="col">Adres vrager</th>
+                        <th scope="col">Postcode vrager</th>
+                        <th scope="col">Gemeente vrager</th>
+                        <th scope="col">Telefoonnummer vrager</th>
+                        <th scope="col">Details</th>
+                    </tr>
+                    </thead>
+                    @foreach ($jobs as $job)
+                    <tbody>
+                    <tr>
+                        <td>{{ $job->naam_plaatser }}</td>
+                        <td>{{ $job->type_hulpvraag }}</td>
+                        <td>{{ $job->beschrijving_hulpvraag }}</td>
+                        <td>{{ $job->email_plaatser }}</td>
+                        <td>{{ $job->adres_plaatser }}</td>
+                        <td>{{ $job->postcode_plaatser }}</td>
+                        <td>{{ $job->gemeente_plaatser }}</td>
+                        <td>{{ $job->telefoonnummer_plaatser }}</td>
+                        <td><a href="/jobdetail">Details</a></td>
+                    </tr>
+                    </tbody>
+                    @endforeach
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
 
+    
 @endsection
