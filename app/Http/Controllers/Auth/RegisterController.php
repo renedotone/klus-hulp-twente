@@ -49,10 +49,11 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
+            'name' => ['required', 'string', 'min:2', 'max:255', 'regex:/^[a-zA-Z]+$/u'],
             'adres' => ['required', 'string', 'max:255'],
+            'huisnummer' => ['required', 'string', 'max:255'],
             'postcode' => ['required', 'string', 'max:255'],
-            'telefoonnummer' => ['required', 'string', 'max:255', 'unique:users'],
+            'telefoonnummer' => ['required', 'string', 'max:10', 'unique:users'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:6', 'confirmed'],
         ]);
@@ -72,6 +73,7 @@ class RegisterController extends Controller
         return User::create([
             'name' => $data['name'],
             'adres' => $data['adres'],
+            'huisnummer' => $data['huisnummer'],
             'postcode' => $data['postcode'],
             'telefoonnummer' => $data['telefoonnummer'],
             'email' => $data['email'],

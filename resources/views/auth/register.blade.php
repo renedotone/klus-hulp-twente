@@ -40,6 +40,20 @@
                         </div>
 
                         <div class="form-group row">
+                            <label for="huisnummer" class="col-md-4 col-form-label text-md-right">{{ __('Huisnummer') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="huisnummer" type="text" class="form-control{{ $errors->has('huisnummer') ? ' is-invalid' : '' }}" name="huisnummer" value="{{ old('huisnummer') }}" required autofocus>
+
+                                @if ($errors->has('huisnummer'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('huisnummer') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <label for="postcode" class="col-md-4 col-form-label text-md-right">{{ __('Postcode') }}</label>
 
                             <div class="col-md-6">

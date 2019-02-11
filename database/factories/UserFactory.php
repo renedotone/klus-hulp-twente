@@ -18,6 +18,7 @@ $factory->define(App\User::class, function (Faker $faker) {
     return [
         'name' => $faker->name,
         'adres' => $faker->adres,
+        'huisnummer' => $faker->huisnummer,
         'postcode' => $faker->postcode,
         'gemeente' => $faker->gemeente,
         'telefoonnummer' => $faker->unique()->safeTelefoonnummer,

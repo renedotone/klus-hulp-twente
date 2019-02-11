@@ -17,6 +17,7 @@ class CreateUsersTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('adres');
+            $table->string('huisnummer');
             $table->string('postcode');
             $table->string('gemeente');
             $table->string('telefoonnummer')->unique();
