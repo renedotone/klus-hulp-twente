@@ -26,6 +26,80 @@
                         </div>
 
                         <div class="form-group row">
+                            <label for="adres" class="col-md-4 col-form-label text-md-right">{{ __('Adres') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="adres" type="text" class="form-control{{ $errors->has('adres') ? ' is-invalid' : '' }}" name="adres" value="{{ old('adres') }}" required autofocus>
+
+                                @if ($errors->has('adres'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('adres') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="postcode" class="col-md-4 col-form-label text-md-right">{{ __('Postcode') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="postcode" type="text" class="form-control{{ $errors->has('postcode') ? ' is-invalid' : '' }}" name="postcode" value="{{ old('postcode') }}" required autofocus>
+
+                                @if ($errors->has('postcode'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('postcode') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="gemeente" class="col-md-4 col-form-label text-md-right">{{ __('Gemeente') }}</label>
+
+                            <div class="col-md-6">
+
+                                <select id="gemeente" class="form-control{{ $errors->has('gemeente') ? ' is-invalid' : '' }}" name="gemeente" value="{{ old('gemeente') }}" required autofocus>
+                                    <option value="Enschede" selected="selected">Enschede</option>
+                                    <option value="Almelo">Almelo</option>
+                                    <option value="Hengelo">Hengelo</option>
+                                    <option value="Borne">Borne</option>
+                                    <option value="Haaksbergen">Haaksbergen</option>
+                                    <option value="Hellendoorn">Hellendoorn</option>
+                                    <option value="Dinkelland">Dinkelland</option>
+                                    <option value="Hof van Twente">Hof van Twente</option>
+                                    <option value="Losser">Losser</option>
+                                    <option value="Oldenzaal">Oldenzaal</option>
+                                    <option value="Rijssen-Holten">Rijsse-Holten</option>
+                                    <option value="Tubbergen">Tubbergen</option>
+                                    <option value="Twenterand">Twenterand</option>
+                                    <option value="Wierden">Wierden</option>
+                                </select>
+                                
+                                @if ($errors->has('gemeente'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('gemeente') }}</strong>
+                                    </span>
+                                @endif
+
+                                
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="telefoonnummer" class="col-md-4 col-form-label text-md-right">{{ __('Telefoonnummer') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="telefoonnummer" type="text" class="form-control{{ $errors->has('telefoonnummer') ? ' is-invalid' : '' }}" name="telefoonnummer" value="{{ old('telefoonnummer') }}" required autofocus>
+
+                                @if ($errors->has('telefoonnummer'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('telefoonnummer') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
