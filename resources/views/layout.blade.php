@@ -31,11 +31,54 @@
             <a class="nav-link" href="/">Home</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/jobs">Klussen</a>
+            <a class="nav-link" href="/">Over ons</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/">Spelregels</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/">Succesverhalen</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/jobs">Openstaande klussen</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="/addingjobs">Voeg een klus toe</a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/dashboard">Mijn klusportaal</a>
+        </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <!-- Authentication Links -->
+            @guest
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                </li>
+                @if (Route::has('register'))
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                    </li>
+                @endif
+            @else
+                <li class="nav-item dropdown">
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        {{ Auth::user()->name }} <span class="caret"></span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                           onclick="event.preventDefault();
+                                         document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    </div>
+                </li>
+
+            @endguest
+
         </ul>
     </div>
     </nav>
@@ -51,7 +94,7 @@
 
   <footer class="">
     <div class="container">
-        <div class="row">
+        <div class="row mt-5 mb-5">
         <div class="col-md-4 col-xl-5">
             <div class="pr-xl-4">
             <p>Dit is een site voor de persoon die wel wat hulp kan gebruiken.</p>
