@@ -83,7 +83,7 @@
                                     <option value="Hof van Twente">Hof van Twente</option>
                                     <option value="Losser">Losser</option>
                                     <option value="Oldenzaal">Oldenzaal</option>
-                                    <option value="Rijssen-Holten">Rijsse-Holten</option>
+                                    <option value="Rijssen-Holten">Rijssen-Holten</option>
                                     <option value="Tubbergen">Tubbergen</option>
                                     <option value="Twenterand">Twenterand</option>
                                     <option value="Wierden">Wierden</option>

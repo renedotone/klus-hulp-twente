@@ -17,6 +17,10 @@ class CreateJobsTable extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->string('naam_plaatser');
+            $table->string('adres_plaatser');
+            $table->string('postcode_plaatser');
+            $table->string('gemeente_plaatser');
+            $table->string('telefoonnummer_plaatser');
             $table->string('id_plaatser');
             $table->string('email_plaatser');
             $table->string('type_hulpvraag');
