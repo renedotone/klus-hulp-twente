@@ -21,6 +21,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/jobs', 'JobsController@index')->name('jobs');
 Route::post('/jobs', 'JobsController@store')->name('jobs');
 Route::get('/addingjobs', 'AddingJobsController@index')->name('jobs')->middleware('auth');
-Route::get('/jobdetail', function () {
-    return view('jobdetail');
-});
+Route::get('/jobdetail', 'JobDetailController@index')->name('jobdetail'); 
