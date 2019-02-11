@@ -5,6 +5,7 @@
         <li>{{ $job->type_hulpvraag }}</li>
         <li>{{ $job->beschrijving_hulpvraag }}</li>
         <li>{{ $job->email_plaatser }}</li>
-        <br>
+        <a href="/jobdetail">Details</a>
+        <br><br>
     @endforeach
 </html>
