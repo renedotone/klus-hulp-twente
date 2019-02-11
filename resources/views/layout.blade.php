@@ -36,14 +36,7 @@
         <li class="nav-item">
             <a class="nav-link" href="/addingjobs">Voeg een klus toe</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-        </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
     </div>
     </nav>
 
@@ -55,6 +48,40 @@
     </div>
 
   @yield('content')
+
+  <footer class="">
+    <div class="container">
+        <div class="row">
+        <div class="col-md-4 col-xl-5">
+            <div class="pr-xl-4">
+            <p>Dit is een site voor de persoon die wel wat hulp kan gebruiken.</p>
+            <p class="rights"><span>©  </span><span class="copyright-year">2018</span><span> </span><span>Klus Hulp Twente</span><span>. </span><span>All Rights Reserved.</span></p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <h5>Contact</h5>
+            <dl class="contact-list">
+            <dt>Email:</dt>
+            <dd><a href="mailto:#">KlusHulpTwente@hotmail.com</a></dd>
+            </dl>
+            <dl class="contact-list">
+            <dt>Telefoon:</dt>
+            <dd><a href="tel:#">053-477 555 555</a>
+            </dd>
+            </dl>
+        </div>
+        <div class="col-md-4 col-xl-3">
+            <h5>Links</h5>
+            <ul class="nav-list">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Linkedin</a></li>
+            </ul>
+        </div>
+        </div>
+    </div>
+</footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
