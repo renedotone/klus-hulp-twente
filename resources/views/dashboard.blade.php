@@ -56,7 +56,15 @@
                         <td>{{ $job->gemeente_plaatser }}</td>
                         <td>{{ $job->telefoonnummer_plaatser }}</td>
                         <td><a href="/jobdetail">Details</a></td>
-                        <td><button class="btn btn-danger">Sluit de klus af</button></td>
+                        <td>
+                            <form action="{{ url('/dashboard', ['id' => $job->id]) }}" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <input class="btn btn-danger" type="submit" value="Delete" />
+                                <input type="hidden" name="_method" value="delete" />
+                            </form>
+                            
+                    </td>
                     </tr>
                     </tbody>
                     @endforeach

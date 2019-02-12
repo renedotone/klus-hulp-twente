@@ -32,5 +32,17 @@ class DashboardController extends Controller
         return view('dashboard')->with('jobs', $jobs);
     }
 
+        /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(Job $job)
+    {
+        $job->delete();
+        return view('dashboard');
+    }
+
 
 }
