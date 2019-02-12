@@ -27,10 +27,7 @@ class DashboardController extends Controller
     public function index()
     {
         $id= Auth::user()->id;
-        $jobs = DB::table('jobs')->where('id', $id)->get();
-        
-        // $jobs = DB::first()->get()
-
+        $jobs = DB::table('jobs')->where('id_plaatser', $id)->get();
 
         return view('dashboard')->with('jobs', $jobs);
     }
