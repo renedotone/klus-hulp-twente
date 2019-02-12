@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
+use App\Jobs;
 
 class DashboardController extends Controller
 {
@@ -23,6 +25,14 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('dashboard');
+         
+        $jobs = DB::table('jobs')->select('naam_plaatser')->get();
+        
+        // $jobs = DB::first()->get()
+
+
+        return view('dashboard')->with('jobs', $jobs);
     }
+
+
 }
