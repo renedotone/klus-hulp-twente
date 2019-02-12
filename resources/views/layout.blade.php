@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     
     <!-- My own CSS -->
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css" >
+    <link href="{{ asset('css/layoutstyle.css') }}" rel="stylesheet" type="text/css" >
 
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet"> 
@@ -18,6 +18,7 @@
 
   </head>
   <body>
+      {{-- <h1 class="title">test</h1> --}}
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">Navbar</a>
@@ -83,18 +84,18 @@
     </div>
     </nav>
 
-    <div class="jumbotron jumbotron-fluid">
+    <div class="jumbotron jumbotron-fluid custom-jumbotron">
         <div class="container">
             <h1 class="display-4">KlusHulpTwente</h1>
-            <p class="lead">Voor .</p>
+            <p class="lead">Sociaal platform voor de persoon die thuis wel een steuntje kan gebruiken.</p>
         </div>
     </div>
 
   @yield('content')
 
-  <footer class="">
+<footer class="" style="background-color: #839CB5;">
     <div class="container">
-        <div class="row mt-5 mb-5">
+        <div class="row mt-5 pt-5 pb-5">
         <div class="col-md-4 col-xl-5">
             <div class="pr-xl-4">
             <p>Dit is een site voor de persoon die wel wat hulp kan gebruiken.</p>

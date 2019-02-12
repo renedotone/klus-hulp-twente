@@ -3,6 +3,10 @@
 @section('title', 'Landing page')
 
 @section('content')
+<head>
+    <!-- My own CSS -->
+    <link href="{{ asset('css/welcomestyle.css') }}" rel="stylesheet" type="text/css" >
+</head>
 
 <div class="container-fluid">
     <div class="row">
@@ -15,13 +19,13 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                    <img src="https://via.placeholder.com/800x300.png?text=placeholder image 1" class="d-block w-100" alt="...">
+                    <img src="img/welcome/carpentrybanner.jpg" class="d-block  custom-image-welcome" alt="...">
                     </div>
                     <div class="carousel-item">
-                    <img src="https://via.placeholder.com/800x300.png?text=placeholder image 2" class="d-block w-100" alt="...">
+                    <img src="img/welcome/gardeningbanner.jpeg" class="d-block custom-image-welcome" alt="...">
                     </div>
                     <div class="carousel-item">
-                    <img src="https://via.placeholder.com/800x300.png?text=placeholder image 3" class="d-block w-100" alt="...">
+                    <img src="img/welcome/painterbanner.jpg" class="d-block custom-image-welcome" alt="...">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
