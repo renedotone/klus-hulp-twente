@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use Auth;
 use App\Jobs;
 
 class DashboardController extends Controller
@@ -25,8 +26,8 @@ class DashboardController extends Controller
      */
     public function index()
     {
-         
-        $jobs = DB::table('jobs')->select('naam_plaatser')->get();
+        $id= Auth::user()->id;
+        $jobs = DB::table('jobs')->where('id', $id)->get();
         
         // $jobs = DB::first()->get()
 
