@@ -63,8 +63,7 @@
                                 <input class="btn btn-danger" type="submit" value="Delete" />
                                 <input type="hidden" name="_method" value="delete" />
                             </form>
-                            
-                    </td>
+                        </td>
                     </tr>
                     </tbody>
                     @endforeach

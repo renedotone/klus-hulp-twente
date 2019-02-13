@@ -38,10 +38,12 @@ class DashboardController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Job $job)
+    public function destroy($id)
     {
+        $job = Jobs::findOrFail($id);
         $job->delete();
-        return view('dashboard');
+        return redirect()->route('dashboard');
+
     }
 
 
