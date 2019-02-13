@@ -1,13 +1,18 @@
 <?php
 
 namespace App\Http\Controllers;
+use DB;
+use Auth;
+use App\Jobs;
 
 use Illuminate\Http\Request;
 
 class JobDetailController extends Controller
 {
-    public function index()
+    public function index($id)
     {
-        return view ('jobdetail');
+        $jobs = DB::table('jobs')->where('id', $id)->get();
+
+        return view('jobdetail')->with('jobs', $jobs);
     }
 }

@@ -33,7 +33,7 @@
                         <td>{{ $job->postcode_plaatser }}</td>
                         <td>{{ $job->gemeente_plaatser }}</td>
                         <td>{{ $job->telefoonnummer_plaatser }}</td>
-                        <td><a href="/jobdetail">Details</a></td>
+                        <td><a href="{{ url('/jobdetail', $job->id) }}">Details</a></td>
                     </tr>
                     </tbody>
                     @endforeach
@@ -43,5 +43,5 @@
     </div>
 </div>
 
-    
+
 @endsection

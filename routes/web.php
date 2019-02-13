@@ -26,6 +26,6 @@ Route::post('/jobs', 'JobsController@store')->name('jobs');
 
 Route::get('/addingjobs', 'AddingJobsController@index')->name('jobs')->middleware('auth');
 
-Route::get('/jobdetail', 'JobDetailController@index')->name('jobdetail'); 
+Route::get('/jobdetail{id}', 'JobDetailController@index')->name('jobdetail');
 
 Route::redirect('/home', '/', 302);
