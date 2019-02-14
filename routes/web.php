@@ -21,6 +21,9 @@ Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
 Route::delete('/dashboard/{id}', 'DashboardController@destroy')->name('dashboard');
 
+Route::get('/editjobs', 'EditjobsController@index')->name('editjobs');
+// Route::patch('/dashboard/{id}/edit', 'DashboardController@edit')->name('dashboard');
+
 Route::get('/jobs', 'JobsController@index')->name('jobs');
 Route::post('/jobs', 'JobsController@store')->name('jobs');
 

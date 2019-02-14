@@ -42,6 +42,7 @@
                         <th scope="col">Telefoonnummer vrager</th>
                         <th scope="col">Details</th>
                         <th scope="col">Sluit de klus af</th>
+                        <th scope="col">Klus aanpassen</th>
                     </tr>
                     </thead>
                     @foreach ($jobs as $job)
@@ -63,6 +64,9 @@
                                 <input class="btn btn-danger" type="submit" value="Delete" />
                                 <input type="hidden" name="_method" value="delete" />
                             </form>
+                        </td>
+                        <td>
+                            <a class="btn btn-info" href="/editjobs" role="button">Aanpassen</a>
                         </td>
                     </tr>
                     </tbody>
