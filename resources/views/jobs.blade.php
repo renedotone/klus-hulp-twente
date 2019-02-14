@@ -14,11 +14,11 @@
                         <th scope="col">Naam van de plaatser</th>
                         <th scope="col">Type hulpvraag</th>
                         <th scope="col">Beschrijving hulpvraag</th>
-                        <th scope="col">Email vrager</th>
-                        <th scope="col">Adres vrager</th>
-                        <th scope="col">Postcode vrager</th>
+                        {{-- <th scope="col">Email vrager</th> --}}
+                        {{-- <th scope="col">Adres vrager</th>
+                        <th scope="col">Postcode vrager</th> --}}
                         <th scope="col">Gemeente vrager</th>
-                        <th scope="col">Telefoonnummer vrager</th>
+                        {{-- <th scope="col">Telefoonnummer vrager</th> --}}
                         <th scope="col">Details</th>
                     </tr>
                     </thead>
@@ -28,11 +28,11 @@
                         <td>{{ $job->naam_plaatser }}</td>
                         <td>{{ $job->type_hulpvraag }}</td>
                         <td>{{ $job->beschrijving_hulpvraag }}</td>
-                        <td>{{ $job->email_plaatser }}</td>
-                        <td>{{ $job->adres_plaatser }}</td>
-                        <td>{{ $job->postcode_plaatser }}</td>
+                        {{-- <td>{{ $job->email_plaatser }}</td> --}}
+                        {{-- <td>{{ $job->adres_plaatser }}</td> --}}
+                        {{-- <td>{{ $job->postcode_plaatser }}</td> --}}
                         <td>{{ $job->gemeente_plaatser }}</td>
-                        <td>{{ $job->telefoonnummer_plaatser }}</td>
+                        {{-- <td>{{ $job->telefoonnummer_plaatser }}</td> --}}
                         <td><a href="{{ url('/jobdetail', $job->id) }}">Details</a></td>
                     </tr>
                     </tbody>

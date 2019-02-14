@@ -34,6 +34,14 @@ jobdetail beschrijving:
                             <td>{{ $job->postcode_plaatser }}</td>
                             <td>{{ $job->gemeente_plaatser }}</td>
                             <td>{{ $job->telefoonnummer_plaatser }}</td>
+                            <td><button onclick="myFunction()">Reageer</button></td>
+
+
+
+
+
+
+                            
                         </tr>
                         </tbody>
                         @endforeach
@@ -42,5 +50,11 @@ jobdetail beschrijving:
             </div>
         </div>
     </div>
-
+    <p id="demo"></p>
 @endsection
+
+<script>
+    function myFunction() {
+      document.getElementById("demo").innerHTML = "Dank voor het reageren";
+    }
+    </script>
