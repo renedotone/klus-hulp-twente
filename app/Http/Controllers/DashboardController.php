@@ -42,7 +42,7 @@ class DashboardController extends Controller
     {
         $job = Jobs::findOrFail($id);
         $job->delete();
-        return redirect()->route('dashboard');
+        return redirect('/dashboard');
 
     }
 
