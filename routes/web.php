@@ -32,3 +32,6 @@ Route::get('/addingjobs', 'AddingJobsController@index')->name('jobs')->middlewar
 Route::get('/jobdetail/{id}', 'JobDetailController@index')->name('jobdetail');
 
 Route::redirect('/home', '/', 302);
+
+Route::get('/userblogposts', 'UserblogpostsController@index')->name('userblogposts');
+Route::post('/userblogposts', 'UserblogpostsController@store')->name('userblogposts');
