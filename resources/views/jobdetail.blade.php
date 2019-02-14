@@ -34,14 +34,7 @@ jobdetail beschrijving:
                             <td>{{ $job->postcode_plaatser }}</td>
                             <td>{{ $job->gemeente_plaatser }}</td>
                             <td>{{ $job->telefoonnummer_plaatser }}</td>
-                            <td><button onclick="myFunction()">Reageer</button></td>
-
-
-
-
-
-
-                            
+                            <td><button class="btn btn-info" onclick="myFunction()">Reageer</button></td>    
                         </tr>
                         </tbody>
                         @endforeach

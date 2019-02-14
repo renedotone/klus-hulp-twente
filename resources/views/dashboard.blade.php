@@ -56,7 +56,7 @@
                         <td>{{ $job->postcode_plaatser }}</td>
                         <td>{{ $job->gemeente_plaatser }}</td>
                         <td>{{ $job->telefoonnummer_plaatser }}</td>
-                        <td><a href="/jobdetail">Details</a></td>
+                        <td><a class="btn btn-info" href="/jobdetail">Details</a></td>
                         <td>
                             <form action="{{ url('/dashboard', ['id' => $job->id]) }}" method="post">
                                 @csrf
