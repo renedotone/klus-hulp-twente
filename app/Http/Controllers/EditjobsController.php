@@ -21,9 +21,8 @@ class EditjobsController extends Controller
     // }
 
     public function index($id)
-    {
-        $id= Auth::user()->id;
-        $jobs = DB::table('jobs')->where('id_plaatser', $id)->get();
+    {   
+        $jobs = DB::table('jobs')->where('id', $id)->get();
 
         return view('/editjobs')->with('jobs', $jobs);
     }
