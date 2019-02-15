@@ -87,14 +87,14 @@
 
     <div class="jumbotron jumbotron-fluid custom-jumbotron">
         <div class="container">
-            <h1 class="display-4">KlusHulpTwente</h1>
-            <p class="lead">Sociaal platform voor de persoon die thuis wel een steuntje kan gebruiken.</p>
+            <h1 class="display-4" style="color: white">KlusHulpTwente</h1>
+            <p class="lead" style="color: white">Sociaal platform voor iedereen die thuis wel een steuntje kan gebruiken.</p>
         </div>
     </div>
 
   @yield('content')
 
-<footer class="" style="background-color: #839CB5;">
+<footer class="" style="background-color: #A1BEDA;">
     <div class="container">
         <div class="row mt-5 pt-5 pb-5">
         <div class="col-md-4 col-xl-5">
