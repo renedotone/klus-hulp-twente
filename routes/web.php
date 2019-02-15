@@ -29,7 +29,7 @@ Route::post('/jobs', 'JobsController@store')->name('jobs');
 
 Route::get('/addingjobs', 'AddingJobsController@index')->name('jobs')->middleware('auth');
 
-Route::get('/jobdetail/{id}', 'JobDetailController@index')->name('jobdetail');
+Route::get('/jobdetail/{id}', 'JobDetailController@jobdetail');
 
 Route::redirect('/home', '/', 302);
 

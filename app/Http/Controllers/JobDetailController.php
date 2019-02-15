@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 
 class JobDetailController extends Controller
 {
-    public function index($id)
+    public function jobdetail($id)
     {
         $jobs = DB::table('jobs')->where('id', $id)->get();
 
