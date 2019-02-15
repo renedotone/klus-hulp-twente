@@ -38,7 +38,7 @@
                     <a class="nav-link" href="/">Spelregels</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/">Succesverhalen</a>
+                    <a class="nav-link" href="/userblogposts">Succesverhalen</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/jobs">Openstaande klussen</a>

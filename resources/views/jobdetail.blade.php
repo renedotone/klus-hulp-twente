@@ -4,7 +4,7 @@
 
 @section('content')
 
-jobdetail beschrijving:
+
 
 <div class="container-fluid">
         <div class="row">
@@ -12,6 +12,10 @@ jobdetail beschrijving:
                 <div class="table-responsive">
                     <table class="table table-dark table-hover">
                         <thead>
+                        <tr>
+                            <th>Klusvraag beschrijving</th>
+                        </tr>
+                        
                         <tr>
                             <th scope="col">Naam van de plaatser</th>
                             <th scope="col">Type hulpvraag</th>
@@ -21,6 +25,7 @@ jobdetail beschrijving:
                             <th scope="col">Postcode vrager</th>
                             <th scope="col">Gemeente vrager</th>
                             <th scope="col">Telefoonnummer vrager</th>
+                            <th scope="col">Reageren?</th>
                         </tr>
                         </thead>
                         @foreach ($jobs as $job)
@@ -34,7 +39,11 @@ jobdetail beschrijving:
                             <td>{{ $job->postcode_plaatser }}</td>
                             <td>{{ $job->gemeente_plaatser }}</td>
                             <td>{{ $job->telefoonnummer_plaatser }}</td>
-                            <td><button class="btn btn-info" onclick="myFunction()">Reageer</button></td>    
+                            <td><button class="btn btn-info" onclick="myFunction()">Reageer</button></td>
+                        </tr>
+                        <tr>
+                            <td id="demo"></td>
+
                         </tr>
                         </tbody>
                         @endforeach
@@ -43,11 +52,11 @@ jobdetail beschrijving:
             </div>
         </div>
     </div>
-    <p id="demo"></p>
+    <p ></p>
 @endsection
 
 <script>
     function myFunction() {
-      document.getElementById("demo").innerHTML = "Dank voor het reageren";
+      document.getElementById("demo").innerHTML = "Bedankt voor uw reactie. De vrager neemt zo snel mogelijk contact met u op.";
     }
     </script>
