@@ -66,7 +66,7 @@
                             </form>
                         </td>
                         <td>
-                            <a class="btn btn-info" href="/editjobs" role="button">Aanpassen</a>
+                            <a class="btn btn-info" href="{{ url('/editjobs', $job->id) }}" role="button">Aanpassen</a>
                         </td>
                     </tr>
                     </tbody>

@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
+use Auth;
+use App\Jobs;
 
 class EditjobsController extends Controller
 {
@@ -11,9 +14,18 @@ class EditjobsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+
+    // public function index()
+    // {
+    //     return view('/editjobs')->with('jobs', $jobs);
+    // }
+
+    public function index($id)
     {
-        return view('/editjobs');
+        $id= Auth::user()->id;
+        $jobs = DB::table('jobs')->where('id_plaatser', $id)->get();
+
+        return view('/editjobs')->with('jobs', $jobs);
     }
 
     /**
