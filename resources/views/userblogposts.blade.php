@@ -35,7 +35,7 @@
                 {{ csrf_field() }}
                     <div class="form-group ">
                         <label for="typehulpvraag">Type Hulpvraag</label>
-                        <input name="type_hulpvraag" type="text" class="form-control" id="typehulpvraag" placeholder="U kunt hier vermelden om wat voro soort hulp het ging."><br>       
+                        <input name="type_hulpvraag_blog" type="text" class="form-control" id="typehulpvraag" placeholder="U kunt hier vermelden om wat voro soort hulp het ging."><br>       
                     </div>
                     <div class="form-group">
                         <label for="beschrijvinghulpvraag">Wie heeft de Hulpvraag uitgevoerd?</label>
@@ -43,7 +43,7 @@
                     </div>
                     <div class="form-group">
                         <label for="beschrijvinghulpvraag">Uw ervaring</label>
-                        <textarea class="form-control" rows="5" id="beschrijvinghulpvraag" name="beschrijving_hulpvraag"placeholder="U kunt uw ervaring hier plaatsen."></textarea>
+                        <textarea class="form-control" rows="5" id="beschrijvinghulpvraag" name="beschrijving_hulpvraag_blog"placeholder="U kunt uw ervaring hier plaatsen."></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Voeg uw succesverhaal toe</button>
                 </form>

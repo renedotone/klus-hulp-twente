@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use DB;
 use Auth;
 use App\Jobs;
+use App\Userblogposts;
 
 class DashboardController extends Controller
 {
@@ -28,8 +29,11 @@ class DashboardController extends Controller
     {
         $id= Auth::user()->id;
         $jobs = DB::table('jobs')->where('id_plaatser', $id)->get();
+        $userblogposts = DB::table('userblogposts')->where('id_plaatser_blog', $id)->get();
 
-        return view('dashboard')->with('jobs', $jobs);
+        return view('dashboard')
+        ->with('jobs', $jobs)
+        ->with('userblogposts', $userblogposts);
     }
 
         /**

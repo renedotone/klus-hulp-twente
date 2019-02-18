@@ -77,6 +77,21 @@
     </div>
 </div>
 
+@foreach ($userblogposts as $userblogposts)
+<div class="container">
+    <div class="row">
+        <div class="col-sm mb-5 mt-5">
+            <div class="card w-100">
+                <div class="card-body">
+                    <h5 class="card-title">Het verhaal van {{ $userblogposts->naam_plaatser_blog }}</h5>
+                    <p class="card-text">Type hulpvraag: {{ $userblogposts->type_hulpvraag_blog }}</p>
+                    <p class="card-text">Ervaring: {{ $userblogposts->beschrijving_hulpvraag_blog }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endforeach
 
 
 @endsection
