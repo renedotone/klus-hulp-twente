@@ -11,9 +11,17 @@
     <form method="POST" action="/jobs">
         {{ csrf_field() }}
 
-            <div class="form-group ">
-                <label for="typehulpvraag">Type Hulpvraag</label>
-                <input name="type_hulpvraag" type="text" class="form-control" id="typehulpvraag" placeholder="type hulp vraag"><br>       
+            <div class="form-group">
+                <label for="beschrijvinghulpvraag">Type Hulpvraag</label>
+                    <select id="typehulpvraag" class="form-control{{ $errors->has('typehulpvraag') ? ' is-invalid' : '' }}" name="type_hulpvraag" value="{{ old('typehulpvraag') }}" required autofocus>
+                        <option value="Schilderen" selected="selected">Schilderen</option>
+                        <option value="Tuinieren">Tuinieren</option>
+                        <option value="Houtbewerking">Houtbewerking</option>
+                        <option value="Schoonmaken">Schoonmaken</option>
+                        <option value="Verhuizen">Verhuizen</option>
+                        <option value="Koken">Koken</option>
+                        <option value="Boodschappen doen">Boodschappen doen</option>
+                    </select>
             </div>
         
             <div class="form-group">

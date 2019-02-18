@@ -14,6 +14,9 @@
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
 
+    <!-- TableSorter Javascript Library -->
+    
+
     <title>@yield('title', 'Klus Hulp Twente')</title>
 
   </head>
