@@ -22,9 +22,9 @@ class EditjobsController extends Controller
 
     public function index($id)
     {   
-        $jobs = DB::table('jobs')->where('id', $id)->get();
+        $job = Jobs::findOrFail($id);
 
-        return view('/editjobs')->with('jobs', $jobs);
+        return view('/editjobs')->with('job', $job);
     }
 
     /**
@@ -65,9 +65,11 @@ class EditjobsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Request $request, $id)
     {
-        //
+        $jobs = DB::table('jobs')->where('id', $id)->post();
+
+        return view('/dashboard')->with('jobs', $jobs);
     }
 
     /**
@@ -79,7 +81,15 @@ class EditjobsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        dd('hello');
+        dd($request);
+        $jobs = DB::table('jobs')->where('id', $id)->post();
+
+        
+        
+        // $jobs->save();
+
+        return view('/dashboard')->with('jobs', $jobs);
+
     }
 
     /**
