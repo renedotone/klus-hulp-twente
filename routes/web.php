@@ -17,12 +17,16 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard'); 
 
 Route::delete('/dashboard/{id}', 'DashboardController@destroy')->name('dashboard');
 
 Route::get('/editjobs/{id}', 'EditjobsController@index')->name('editjobs');
+<<<<<<< HEAD
 Route::post('/editjobs/{id}', 'EditjobsController@update');
+=======
+Route::patch('/dashboard/{id}/edit', 'DashboardController@edit')->name('dashboard');
+>>>>>>> 4e79f1bf22c51fa1b4eadbda78569a5766f19557
 
 Route::get('/jobs', 'JobsController@index')->name('jobs');
 Route::post('/jobs', 'JobsController@store')->name('jobs');

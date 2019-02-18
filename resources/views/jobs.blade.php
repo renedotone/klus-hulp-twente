@@ -8,7 +8,7 @@
     <div class="row">
         <div class="col-sm m-5">
             <div class="table-responsive">
-                <table class="table table-dark table-hover">
+                <table id="jobsTable" class="table table-dark table-hover">
                     <thead>
                     <tr>
                         <th scope="col">Naam van de plaatser</th>
@@ -42,6 +42,5 @@
         </div>
     </div>
 </div>
-
 
 @endsection

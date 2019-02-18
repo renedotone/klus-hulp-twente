@@ -17,7 +17,7 @@ class EditjobsController extends Controller
 
     // public function index()
     // {
-    //     return view('/editjobs')->with('jobs', $jobs);
+    //     return view('/editjobs')->with('jobs', $jobs); 
     // }
 
     public function index($id)
