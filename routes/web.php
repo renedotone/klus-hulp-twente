@@ -35,3 +35,5 @@ Route::redirect('/home', '/', 302);
 
 Route::get('/userblogposts', 'UserblogpostsController@index')->name('userblogposts');
 Route::post('/userblogposts', 'UserblogpostsController@store')->name('userblogposts');
+
+Route::get('/admindashboard', 'AdminDashboardController@index')->name('admindashboard'); 
