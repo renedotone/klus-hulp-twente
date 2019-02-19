@@ -81,14 +81,18 @@ class EditjobsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        dd($request);
-        $jobs = DB::table('jobs')->where('id', $id)->post();
+        // dd(request()->all());
 
-        
-        
-        // $jobs->save();
+        // $jobs = DB::table('jobs')->where('id', $id)->post();
+        $jobs = Jobs::find($id);
 
-        return view('/dashboard')->with('jobs', $jobs);
+        $jobs->type_hulpvraag = request('type_hulpvraag');
+        $jobs->beschrijving_hulpvraag = request('beschrijving_hulpvraag');
+        
+        $jobs->save();
+
+        return redirect('/dashboard');
+        // return view('/dashboard')->with('jobs', $jobs);
 
     }
 

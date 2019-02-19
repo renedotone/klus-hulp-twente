@@ -10,7 +10,7 @@
         <h1 class="title">U kunt hier uw klusvraag aanpassen</h1>
         
         {{-- <form action="{{ url('/dashboard', ['id' => $job->id]) }}" method="post"> --}}
-             <form method="POST"action="/editjobs/{{ $job->id }}">
+             <form method="POST" action="/editjobs/{{ $job->id }}">
                 {{ csrf_field() }}
                 
              
