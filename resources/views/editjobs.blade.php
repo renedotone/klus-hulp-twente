@@ -5,7 +5,8 @@
 @section('content')
     <div class="container">
         <h1 class="title">U kunt hier uw klusvraag aanpassen</h1>
-             <form method="POST" action="/editjobs/{{ $job->id }}">
+             
+            <form method="POST" action="/editjobs/{{ $job->id }}">
                 {{ csrf_field() }}
                 
                 <div class="form-group ">
@@ -21,4 +22,15 @@
                 <button type="submit" class="btn btn-primary">Pas de klusvraag aan</button>  
             </form>     
     </div>
+
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
 @endsection

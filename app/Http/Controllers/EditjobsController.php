@@ -45,7 +45,10 @@ class EditjobsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'title' => 'required|max:255',
+            'body' => 'required|max:255',
+        ]);     
     }
 
     /**
@@ -86,6 +89,11 @@ class EditjobsController extends Controller
         $jobs->type_hulpvraag = request('type_hulpvraag');
         $jobs->beschrijving_hulpvraag = request('beschrijving_hulpvraag');
         
+        $validatedData = $request->validate([
+            'type_hulpvraag' => 'required|max:255',
+            'beschrijving_hulpvraag' => 'required|max:255',
+        ]); 
+
         $jobs->save();
 
         return redirect('/dashboard');
@@ -101,4 +109,5 @@ class EditjobsController extends Controller
     {
         //
     }
+
 }
