@@ -36,4 +36,10 @@ Route::redirect('/home', '/', 302);
 Route::get('/userblogposts', 'UserblogpostsController@index')->name('userblogposts');
 Route::post('/userblogposts', 'UserblogpostsController@store')->name('userblogposts');
 
-Route::get('/admindashboard', 'AdminDashboardController@index')->name('admindashboard'); 
+Route::prefix('admin')->group(function()
+{
+    Route::get('/login', 'Auth\AdminLoginController@index')->name('admin.login');
+    Route::post('/login', 'Auth\AdminLoginController@store')->name('admin.login.submit');
+    Route::get('/', 'AdminDashboardController@index')->name('admin.dashboard'); 
+});
+

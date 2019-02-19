@@ -104,6 +104,7 @@
             <div class="pr-xl-4">
             <p>Dit is een site voor de persoon die wel wat hulp kan gebruiken.</p>
             <p class="rights"><span>©  </span><span class="copyright-year">2018</span><span> </span><span>Klus Hulp Twente</span><span>. </span><span>All Rights Reserved.</span></p>
+            <a class="nav-link" href="/admin/login">ADMIN LOGIN</a>
             </div>
         </div>
         <div class="col-md-4">
