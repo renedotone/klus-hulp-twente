@@ -24,16 +24,13 @@
       {{-- <h1 class="title">test</h1> --}}
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="#">Home</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="/">Home</a>
-                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/">Over ons</a>
                 </li>
@@ -91,7 +88,7 @@
     <div class="jumbotron jumbotron-fluid custom-jumbotron">
         <div class="container">
             <h1 class="display-4" style="color: white">KlusHulpTwente</h1>
-            <p class="lead" style="color: white">Sociaal platform voor iedereen die thuis wel een steuntje kan gebruiken.</p>
+            <p class="lead" style="color: white">Want iedereen kan wel een steuntje in de rug gebruiken.</p>
         </div>
     </div>
 
@@ -102,7 +99,7 @@
         <div class="row mt-5 pt-5 pb-5">
         <div class="col-md-4 col-xl-5">
             <div class="pr-xl-4">
-            <p>Dit is een site voor de persoon die wel wat hulp kan gebruiken.</p>
+            <p>Iedereen kan wel wat hulp gebruiken.</p>
             <p class="rights"><span>©  </span><span class="copyright-year">2018</span><span> </span><span>Klus Hulp Twente</span><span>. </span><span>All Rights Reserved.</span></p>
             <a class="nav-link" href="/admin/login">ADMIN LOGIN</a>
             </div>
