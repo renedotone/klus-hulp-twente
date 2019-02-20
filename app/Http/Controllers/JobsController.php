@@ -118,6 +118,7 @@ class JobsController extends Controller
         if (Auth::guard('admin')) {
             return redirect()->intended('/admin');
         }
+        
         return redirect('/dashboard');
 
     }
