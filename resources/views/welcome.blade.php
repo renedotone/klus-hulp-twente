@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'Welkom bij KunstHulpTwente')
+@section('title', 'Welkom bij KlusHulpTwente')
 
 @section('content')
 <head>
@@ -40,6 +40,16 @@
         </div>
     </div>
 </div> --}}
+
+<div class="jumbotron jumbotron-fluid custom-jumbotron">
+        <div class="container">
+        <div><img src="../img/layout/klshlp3zw.png"  </div>
+        <div> </div>                    
+                        
+            {{-- <h1 class="display-4" style="color: white">KlusHulpTwente</h1> --}}
+            <p class="lead" style="color: black">Iedereen kan wel een steuntje in de rug gebruiken.</p>
+        </div>
+    </div>
 
 <div class="container-fluid">
     <div class="row">
