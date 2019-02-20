@@ -25,31 +25,31 @@
       {{-- <h1 class="title">test</h1> --}}
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Home</a>
+            <a class="navbar-brand" href="/">Home</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="/about">Over ons</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/">Spelregels</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/userblogposts">Succesverhalen</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/jobs">Openstaande klussen</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/addingjobs">Voeg een klus toe</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/dashboard">Mijn klusportaal</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">Over ons</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Spelregels</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/userblogposts">Succesverhalen</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/jobs">Openstaande klussen</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/addingjobs">Voeg een klus toe</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/dashboard">Mijn klusportaal</a>
+                    </li>
                 </ul>
                 <ul class="navbar-nav ml-auto">
                     <!-- Authentication Links -->
