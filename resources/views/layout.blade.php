@@ -18,7 +18,7 @@
     <!-- TableSorter Javascript Library -->
     
 
-    <title>@yield('title', 'Klus Hulp Twente')</title>
+    <title>@yield('title', 'Klus Hulp+Twente')</title>
 
   </head>
   <body>
