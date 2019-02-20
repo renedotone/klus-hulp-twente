@@ -15,7 +15,7 @@ class JobsController extends Controller
     public function index()
     {
         $jobs = Jobs::all();
-        return view('jobs', compact('jobs'));
+        return view('jobs.jobs', compact('jobs'));
     }
 
     /**
@@ -25,7 +25,7 @@ class JobsController extends Controller
      */
     public function create()
     {
-        return view('addingjobs');
+        return view('jobs.addingjobs');
     }
 
     /**
@@ -63,7 +63,7 @@ class JobsController extends Controller
     {
         $job = Jobs::findOrFail($id);
 
-        return view('jobdetail')->with('job', $job);
+        return view('jobs.jobdetail')->with('job', $job);
     }
 
     /**
@@ -76,7 +76,7 @@ class JobsController extends Controller
     {
         $job = Jobs::findOrFail($id);
 
-        return view('/editjobs')->with('job', $job);
+        return view('jobs.editjobs')->with('job', $job);
     }
 
     /**
