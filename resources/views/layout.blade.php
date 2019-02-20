@@ -33,7 +33,7 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="/">Over ons</a>
+                    <a class="nav-link" href="/about">Over ons</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/">Spelregels</a>
