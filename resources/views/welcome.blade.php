@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'Landing page')
+@section('title', 'Welkom bij KunstHulpTwente')
 
 @section('content')
 <head>
@@ -8,7 +8,7 @@
     <link href="{{ asset('css/welcomestyle.css') }}" rel="stylesheet" type="text/css" >
 </head>
 
-<div class="container-fluid">
+{{-- <div class="container-fluid">
     <div class="row">
         <div class="col-sm mt-5 mb-5">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -39,7 +39,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 
 <div class="container-fluid">
     <div class="row">

@@ -1,13 +1,17 @@
 .custom-jumbotron
 {
-    background-image: url(../img/layout/header.jpeg);
+    background-color: beige;
+    /* background-image: url(../img/layout/header.jpeg); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    text-shadow: 0px 0px 5px black;
-      
-}
+    /* text-shadow: 0px 0px 5px black; */
 
+
+}
+img {
+    float: left;
+    padding-right: 50px; }
 /* .title
 {
     font-size: 500px;

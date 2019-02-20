@@ -13,7 +13,8 @@
 
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
-
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!-- TableSorter Javascript Library -->
     
 
@@ -87,8 +88,11 @@
 
     <div class="jumbotron jumbotron-fluid custom-jumbotron">
         <div class="container">
-            <h1 class="display-4" style="color: white">KlusHulpTwente</h1>
-            <p class="lead" style="color: white">Want iedereen kan wel een steuntje in de rug gebruiken.</p>
+        <div><img src="../img/layout/klshlp3zw.png"  </div>
+        <div> </div>                    
+                        
+            {{-- <h1 class="display-4" style="color: white">KlusHulpTwente</h1> --}}
+            <p class="lead" style="color: black">Iedereen kan wel een steuntje in de rug gebruiken.</p>
         </div>
     </div>
 
