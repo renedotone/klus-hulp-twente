@@ -46,10 +46,11 @@
         <div class="center">
             <div><img src="../img/layout/klshlp3zw.png"  </div>
         <div> 
-            </div>                    
+</div>                    
                         
             {{-- <h1 class="display-4" style="color: white">KlusHulpTwente</h1> --}}
-            <p class="lead" style="color: black">Iedereen kan wel een steuntje in de rug gebruiken.</p>
+            <p> </p>
+            <p class="display-5" style="color: black">Iedereen kan wel een steuntje in de rug gebruiken.</p>
         </div>
     </div>
 
