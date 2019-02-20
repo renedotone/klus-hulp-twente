@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Jobs;
+use Auth;
 
 class JobsController extends Controller
 {
@@ -113,6 +114,11 @@ class JobsController extends Controller
     {
         $job = Jobs::findOrFail($id);
         $job->delete();
+
+        if (Auth::guard('admin')) {
+            return redirect()->intended('/admin');
+        }
         return redirect('/dashboard');
+
     }
 }

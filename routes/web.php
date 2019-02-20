@@ -40,6 +40,6 @@ Route::prefix('admin')->group(function()
 {
     Route::get('/login', 'Auth\AdminLoginController@index')->name('admin.login');
     Route::post('/login', 'Auth\AdminLoginController@store')->name('admin.login.submit');
-    Route::get('/', 'AdminDashboardController@index')->name('admin.dashboard'); 
+    Route::get('/', 'AdminDashboardController@index')->name('admin.dashboard');
 });
 

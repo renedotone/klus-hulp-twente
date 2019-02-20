@@ -58,7 +58,7 @@
                         <td>{{ $job->telefoonnummer_plaatser }}</td>
                         <td><a class="btn btn-info" href="{{ url('/jobdetail', $job->id) }}">Details</a></td>
                         <td>
-                            <form action="{{ url('/dashboard', ['id' => $job->id]) }}" method="post">
+                            <form action="{{ url('/admin', ['id' => $job->id]) }}" method="post">
                                 @csrf
                                 @method('DELETE')
                                 <input class="btn btn-danger" type="submit" value="Delete" />

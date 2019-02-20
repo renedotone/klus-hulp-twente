@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Auth;
+use App\Jobs;
+use App\Userblogposts;
+use App\User;
 
 class AdminDashboardController extends Controller
 {
@@ -23,8 +26,15 @@ class AdminDashboardController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
+    
     {
-        return view('admindashboard');
+        $userblogposts = Userblogposts::all();
+        $jobs = Jobs::all();
+        $user = User::all();
+        return view('admindashboard')
+        ->with('jobs', $jobs)
+        ->with('userblogposts', $userblogposts)
+        ->with('user', $user);
     }
 
     /**
@@ -56,7 +66,7 @@ class AdminDashboardController extends Controller
      */
     public function show($id)
     {
-        //
+
     }
 
     /**
