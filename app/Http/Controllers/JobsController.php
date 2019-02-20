@@ -25,7 +25,7 @@ class JobsController extends Controller
      */
     public function create()
     {
-        //
+        return view('addingjobs');
     }
 
     /**
@@ -61,7 +61,9 @@ class JobsController extends Controller
      */
     public function show($id)
     {
-        //
+        $job = Jobs::findOrFail($id);
+
+        return view('jobdetail')->with('job', $job);
     }
 
     /**
@@ -72,7 +74,9 @@ class JobsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $job = Jobs::findOrFail($id);
+
+        return view('/editjobs')->with('job', $job);
     }
 
     /**
@@ -84,7 +88,19 @@ class JobsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $jobs = Jobs::find($id);
+
+        $jobs->type_hulpvraag = request('type_hulpvraag');
+        $jobs->beschrijving_hulpvraag = request('beschrijving_hulpvraag');
+        
+        $validatedData = $request->validate([
+            'type_hulpvraag' => 'required|max:255',
+            'beschrijving_hulpvraag' => 'required|max:255',
+        ]); 
+
+        $jobs->save();
+
+        return redirect('/dashboard');
     }
 
     /**
@@ -95,6 +111,8 @@ class JobsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $job = Jobs::findOrFail($id);
+        $job->delete();
+        return redirect('/dashboard');
     }
 }

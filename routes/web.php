@@ -19,17 +19,17 @@ Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard'); 
 
-Route::delete('/dashboard/{id}', 'DashboardController@destroy')->name('dashboard');
+Route::delete('/dashboard/{id}', 'JobsController@destroy')->name('dashboard');
 
-Route::get('/editjobs/{id}', 'EditjobsController@index')->name('editjobs');
-Route::post('/editjobs/{id}', 'EditjobsController@update');
+Route::get('/editjobs/{id}', 'JobsController@edit');
+Route::post('/editjobs/{id}', 'JobsController@update');
 
 Route::get('/jobs', 'JobsController@index')->name('jobs');
 Route::post('/jobs', 'JobsController@store')->name('jobs');
 
-Route::get('/addingjobs', 'AddingJobsController@index')->name('jobs')->middleware('auth');
+Route::get('/addingjobs', 'JobsController@create')->name('jobs')->middleware('auth');
 
-Route::get('/jobdetail/{id}', 'JobDetailController@jobdetail');
+Route::get('/jobdetail/{id}', 'JobsController@show');
 
 Route::redirect('/home', '/', 302);
 

@@ -28,7 +28,7 @@
                             <th scope="col">Reageren?</th>
                         </tr>
                         </thead>
-                        @foreach ($jobs as $job)
+                       
                         <tbody>
                         <tr>
                             <td>{{ $job->naam_plaatser }}</td>
@@ -46,7 +46,7 @@
 
                         </tr>
                         </tbody>
-                        @endforeach
+                       
                     </table>
                 </div>
             </div>

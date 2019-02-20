@@ -44,9 +44,7 @@ class DashboardController extends Controller
      */
     public function destroy($id)
     {
-        $job = Jobs::findOrFail($id);
-        $job->delete();
-        return redirect('/dashboard');
+        
 
     }
 
