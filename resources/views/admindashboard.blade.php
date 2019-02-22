@@ -38,7 +38,6 @@
                                     <th scope="col">Postcode vrager</th>
                                     <th scope="col">Gemeente vrager</th>
                                     <th scope="col">Telefoonnummer vrager</th>
-                                    <th scope="col">Details</th>
                                     <th scope="col">Sluit de klus af</th>
                                     <th scope="col">Klus aanpassen</th>
                                 </tr>
@@ -54,7 +53,6 @@
                                     <td>{{ $job->postcode_plaatser }}</td>
                                     <td>{{ $job->gemeente_plaatser }}</td>
                                     <td>{{ $job->telefoonnummer_plaatser }}</td>
-                                    <td><a class="btn btn-info" href="{{ url('/jobdetail', $job->id) }}">Details</a></td>
                                     <td>
                                         <form action="{{ url('/dashboard', ['id' => $job->id]) }}" method="post">
                                             @csrf

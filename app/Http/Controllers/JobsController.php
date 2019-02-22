@@ -115,11 +115,32 @@ class JobsController extends Controller
         $job = Jobs::findOrFail($id);
         $job->delete();
 
-        if (Auth::guard('admin')) {
-            return redirect()->intended('/admin');
-        }
-        
-        return redirect('/dashboard');
 
+        if(Auth::guard('admin')->check()) 
+        {
+            return redirect('/admin');
+        } 
+        else 
+        {
+
+                return redirect('/dashboard');
+
+        }
+   
+                
+
+        // if (Auth::guard('admin')) {
+        //     return redirect('/admin');
+        // }
+        // else
+        // {
+        //     return redirect()->action('App\Http\Controllers\DashboardController@index');
+        //     // ('/dashboard');
+        // }
+        // @if (Auth::guard('admin')) 
+        //     return redirect('/admin');
+        // @else 
+        //     return redirect('/dashboard');
+        // @endif
     }
 }
