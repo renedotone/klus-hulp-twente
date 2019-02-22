@@ -101,7 +101,16 @@ class JobsController extends Controller
 
         $jobs->save();
 
-        return redirect('/dashboard');
+        if(Auth::guard('admin')->check()) 
+        {
+            return redirect('/admin');
+        } 
+        else 
+        {
+
+                return redirect('/dashboard');
+
+        }
     }
 
     /**

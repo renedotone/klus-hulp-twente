@@ -7,6 +7,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Auth;
+use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
@@ -80,5 +82,76 @@ class RegisterController extends Controller
             'gemeente' => $data['gemeente'],
             'password' => Hash::make($data['password']),
         ]);
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        $user = User::findOrFail($id);
+        $user->delete();
+
+
+        if(Auth::guard('admin')->check()) 
+        {
+            return redirect('/admin');
+        } 
+        else 
+        {
+
+                return redirect('/dashboard');
+
+        }
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        $user = User::findOrFail($id);
+
+        return view('/edituser')->with('user', $user);
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        $user = User::find($id);
+
+        $user->name = request('new_name');
+        $user->adres = request('new_adres');
+        $user->huisnummer = request('new_huisnummer');
+        $user->postcode = request('new_postcode');
+        $user->telefoonnummer = request('new_telefoonnummer');
+        $user->email = request('new_email');
+        $user->gemeente = request('new_gemeente');
+
+
+        $user->save();
+
+        if(Auth::guard('admin')->check()) 
+        {
+            return redirect('/admin');
+        } 
+        else 
+        {
+
+                return redirect('/dashboard');
+
+        }
     }
 }

@@ -86,6 +86,12 @@
                     <h5 class="card-title">Het verhaal van {{ $userblogposts->naam_plaatser_blog }}</h5>
                     <p class="card-text">Type hulpvraag: {{ $userblogposts->type_hulpvraag_blog }}</p>
                     <p class="card-text">Ervaring: {{ $userblogposts->beschrijving_hulpvraag_blog }}</p>
+                    <form action="{{ url('/dashboard', ['id' => $userblogposts->id]) }}" method="post">
+                        @csrf
+                        @method('DELETE')
+                        <input class="btn btn-danger" type="submit" value="Delete" />
+                        <input type="hidden" name="_method" value="delete" />
+                    </form>
                 </div>
             </div>
         </div>

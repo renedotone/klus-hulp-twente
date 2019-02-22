@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Userblogposts;
+use Auth;
 
 class userblogpostsController extends Controller
 {
@@ -67,7 +68,7 @@ class userblogpostsController extends Controller
      */
     public function edit($id)
     {
-        //
+
     }
 
     /**
@@ -90,6 +91,19 @@ class userblogpostsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $userblogposts = Userblogposts::findOrFail($id);
+        $userblogposts->delete();
+
+
+        if(Auth::guard('admin')->check()) 
+        {
+            return redirect('/admin');
+        } 
+        else 
+        {
+
+                return redirect('/dashboard');
+
+        }
     }
 }

@@ -84,10 +84,13 @@
                                 <tr>
                                     <th scope="col">Naam van de USER</th>
                                     <th scope="col">adres van de USER</th>
+                                    <th scope="col">gemeente van de USER</th>
                                     <th scope="col">huisnummer van de USER</th>
                                     <th scope="col">postcode van de USER</th>
                                     <th scope="col">telefoonnummer van de USER</th>
                                     <th scope="col">email van de USER</th>
+                                    <th scope="col">Verwijder USER</th>
+                                    <th scope="col">USER aanpassen</th>
                                 </tr>
                                 </thead>
                                 @foreach ($user as $user)
@@ -95,10 +98,23 @@
                                 <tr>
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->adres }}</td>
+                                    <td>{{ $user->gemeente }}</td>
                                     <td>{{ $user->huisnummer }}</td>
                                     <td>{{ $user->postcode }}</td>
                                     <td>{{ $user->telefoonnummer }}</td>
                                     <td>{{ $user->email }}</td>
+                                    <td>
+                                        <form action="{{ url('/dashboard', ['id' => $user->id]) }}" method="post">
+                                            @csrf
+                                            @method('DELETE')
+                                            <input class="btn btn-danger" type="submit" value="Delete" />
+                                            <input type="hidden" name="_method" value="delete" />
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <a class="btn btn-info" href="{{ url('/edituser', $user->id) }}" role="button">Aanpassen</a>
+                                    </td>
+                                    
                                 </tr>
                                 </tbody>
                                 @endforeach
@@ -121,6 +137,12 @@
                                         <h5 class="card-title">Het verhaal van {{ $userblogposts->naam_plaatser_blog }}</h5>
                                         <p class="card-text">Type hulpvraag: {{ $userblogposts->type_hulpvraag_blog }}</p>
                                         <p class="card-text">Ervaring: {{ $userblogposts->beschrijving_hulpvraag_blog }}</p>
+                                            <form action="{{ url('/dashboard', ['id' => $userblogposts->id]) }}" method="post">
+                                                @csrf
+                                                @method('DELETE')
+                                                <input class="btn btn-danger" type="submit" value="Delete" />
+                                                <input type="hidden" name="_method" value="delete" />
+                                            </form>
                                     </div>
                                 </div>
                             </div>
