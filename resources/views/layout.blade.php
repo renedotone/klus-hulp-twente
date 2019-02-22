@@ -25,7 +25,7 @@
       {{-- <h1 class="title">test</h1> --}}
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="/">Home</a>
+            <a class="navbar-brand" href="/"><img src="../img/layout/klshlp4_zw.png" width =50px height=50px alt=""></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>

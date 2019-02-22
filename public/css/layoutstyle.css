@@ -1,7 +1,7 @@
 .custom-jumbotron
 {
-    background-color: beige;
-    /* background-image: url(../img/layout/header.jpeg); */
+    background-color: rgb(233, 220, 220);
+    /* background-image: url(../img/layout/header.jpeg);  */
     /* background-repeat: no-repeat;
     background-size: cover;
     background-position: center; */
@@ -16,5 +16,8 @@
 {
     font-size: 500px;
 } */
+body{
+background-color: beige;
 
+}
 
