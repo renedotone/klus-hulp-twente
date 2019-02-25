@@ -93,19 +93,19 @@ class JobsController extends Controller
 
         $jobs->type_hulpvraag = request('type_hulpvraag');
         $jobs->beschrijving_hulpvraag = request('beschrijving_hulpvraag');
-        
+
         $validatedData = $request->validate([
             'type_hulpvraag' => 'required|max:255',
             'beschrijving_hulpvraag' => 'required|max:255',
-        ]); 
+        ]);
 
         $jobs->save();
 
-        if(Auth::guard('admin')->check()) 
+        if(Auth::guard('admin')->check())
         {
             return redirect('/admin');
-        } 
-        else 
+        }
+        else
         {
 
                 return redirect('/dashboard');
@@ -125,18 +125,18 @@ class JobsController extends Controller
         $job->delete();
 
 
-        if(Auth::guard('admin')->check()) 
+        if(Auth::guard('admin')->check())
         {
             return redirect('/admin');
-        } 
-        else 
+        }
+        else
         {
 
                 return redirect('/dashboard');
 
         }
-   
-                
+
+
 
         // if (Auth::guard('admin')) {
         //     return redirect('/admin');
@@ -146,9 +146,9 @@ class JobsController extends Controller
         //     return redirect()->action('App\Http\Controllers\DashboardController@index');
         //     // ('/dashboard');
         // }
-        // @if (Auth::guard('admin')) 
+        // @if (Auth::guard('admin'))
         //     return redirect('/admin');
-        // @else 
+        // @else
         //     return redirect('/dashboard');
         // @endif
     }
