@@ -19,11 +19,6 @@ class JobsController extends Controller
         return view('jobs.jobs', compact('jobs'));
     }
 
-    public function rules()
-    {
-        return view('rules');
-    }
-
     /**
      * Show the form for creating a new resource.
      *
