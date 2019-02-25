@@ -32,7 +32,8 @@ Route::post('/jobs', 'JobsController@store')->name('jobs');
 
 Route::get('/addingjobs', 'JobsController@create')->name('jobs')->middleware('auth');
 
-Route::get('/jobdetail/{id}', 'JobsController@show');
+Route::get('/jobdetail/{id}', 'JobsController@show')->name('jobdetail');
+Route::post('/jobdetail', 'ResponseController@store');
 
 Route::redirect('/home', '/', 302);
 

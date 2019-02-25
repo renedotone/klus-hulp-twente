@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Jobs;
 use Auth;
+use App\Response;
 
 class JobsController extends Controller
 {
@@ -63,8 +64,11 @@ class JobsController extends Controller
     public function show($id)
     {
         $job = Jobs::findOrFail($id);
+        $response = Response::where('id',$id)->get();;
 
-        return view('jobs.jobdetail')->with('job', $job);
+        return view('jobs.jobdetail')
+        ->with('job', $job)
+        ->with('response', $response);
     }
 
     /**
