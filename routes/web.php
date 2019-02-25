@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/dashboard', 'DashboardController@index')->name('dashboard'); 
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
 Route::delete('/dashboard/{id}', 'JobsController@destroy')->name('dashboard');
 
@@ -40,7 +40,8 @@ Route::get('/userblogposts', 'UserblogpostsController@index')->name('userblogpos
 Route::post('/userblogposts', 'UserblogpostsController@store')->name('userblogposts');
 Route::delete('/dashboard/{id}', 'UserblogpostsController@destroy')->name('userblogposts');
 
-Route::get('/about', 'AboutController@index');
+Route::view('/about', 'about');
+Route::view('/rules', 'rules');
 
 Route::prefix('admin')->group(function()
 {
