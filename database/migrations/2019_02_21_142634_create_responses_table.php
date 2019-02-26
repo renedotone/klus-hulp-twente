@@ -19,8 +19,8 @@ class CreateResponsesTable extends Migration
             $table->string('naam_plaatser_response');
             $table->string('id_plaatser_response');
             $table->string('naam_plaatser_hulpvraag');
-            $table->string('id_plaatser_hulpvraag');
             $table->string('bericht_plaatser_response');
+            $table->unsignedInteger('hulpvraag_id');
         });
     }
 

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Response;
+use App\Jobs;
 
 class ResponseController extends Controller
 {
@@ -13,7 +15,7 @@ class ResponseController extends Controller
      */
     public function index()
     {
-        //
+        $response = Response::all();
     }
 
     /**
@@ -34,7 +36,17 @@ class ResponseController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $response = new Response();
+
+        $response->naam_plaatser_response = auth()->user()->name;
+        $response->id_plaatser_response = auth()->user()->id;
+        $response->bericht_plaatser_response = request('response');
+        $response->naam_plaatser_hulpvraag = request('naam_plaatser_hulpvraag');
+        $response->hulpvraag_id = request('job_id');
+
+        $response->save();
+
+        return redirect()->back();
     }
 
     /**
