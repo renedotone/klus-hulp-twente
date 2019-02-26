@@ -41,9 +41,8 @@ class ResponseController extends Controller
         $response->naam_plaatser_response = auth()->user()->name;
         $response->id_plaatser_response = auth()->user()->id;
         $response->bericht_plaatser_response = request('response');
-        $response->naam_plaatser_hulpvraag = request('response');
-        $response->id_plaatser_hulpvraag = request('response');
-        $response->hulpvraag_id = request('response');
+        $response->naam_plaatser_hulpvraag = request('naam_plaatser_hulpvraag');
+        $response->hulpvraag_id = request('job_id');
 
         $response->save();
 

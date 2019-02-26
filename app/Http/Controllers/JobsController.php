@@ -64,7 +64,7 @@ class JobsController extends Controller
     public function show($id)
     {
         $job = Jobs::findOrFail($id);
-        $response = Response::where('id',$id)->get();;
+        $response = Response::where('hulpvraag_id',$job->id)->get();;
 
         return view('jobs.jobdetail')
         ->with('job', $job)

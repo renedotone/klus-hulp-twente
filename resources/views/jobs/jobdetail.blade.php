@@ -58,6 +58,9 @@
                 <form method="POST" action="/jobdetail">
                 {{ csrf_field() }}
                     <div class="form-group">
+                        <input type="hidden" name="job_id" value="{{ $job->id }}" />
+                        <input type="hidden" name="naam_plaatser_hulpvraag" value="{{ $job->naam_plaatser }}" />
+                        <input type="hidden" name="naam_plaatser" value="{{ $job->naam_plaatser }}" />
                         <label for="response">Uw reactie</label>
                         <textarea class="form-control" rows="5" id="response" name="response"placeholder="U kunt uw reactie hier plaatsen."></textarea>
                     </div>
