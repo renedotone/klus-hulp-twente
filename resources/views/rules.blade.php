@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'Over ons')
+@section('title', 'Spelregels')
 
 @section('content')
 
