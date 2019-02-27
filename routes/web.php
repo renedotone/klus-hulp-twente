@@ -34,6 +34,7 @@ Route::get('/addingjobs', 'JobsController@create')->name('jobs')->middleware('au
 
 Route::get('/jobdetail/{id}', 'JobsController@show')->name('jobdetail');
 Route::post('/jobdetail', 'ResponseController@store');
+Route::delete('/jobdetail/{id}', 'ResponseController@destroy');
 
 Route::redirect('/home', '/', 302);
 

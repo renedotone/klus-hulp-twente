@@ -101,9 +101,7 @@ class userblogpostsController extends Controller
         } 
         else 
         {
-
-                return redirect('/dashboard');
-
+            return redirect('/dashboard');
         }
     }
 }
