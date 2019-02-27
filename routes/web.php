@@ -18,8 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+Route::delete('/user/{id}', 'Auth\RegisterController@destroy');
 
-Route::delete('/dashboard/{id}', 'JobsController@destroy')->name('dashboard');
+// Route::delete('/dashboard/{id}', 'JobsController@destroy')->name('dashboard');
 
 Route::get('/editjobs/{id}', 'JobsController@edit');
 Route::post('/editjobs/{id}', 'JobsController@update');
@@ -29,6 +30,7 @@ Route::post('/edituser/{id}', 'Auth\RegisterController@update');
 
 Route::get('/jobs', 'JobsController@index')->name('jobs');
 Route::post('/jobs', 'JobsController@store')->name('jobs');
+Route::delete('/jobs/{id}', 'JobsController@destroy');
 
 Route::get('/addingjobs', 'JobsController@create')->name('jobs')->middleware('auth');
 

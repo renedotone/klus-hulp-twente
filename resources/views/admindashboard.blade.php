@@ -54,7 +54,7 @@
                                     <td>{{ $job->gemeente_plaatser }}</td>
                                     <td>{{ $job->telefoonnummer_plaatser }}</td>
                                     <td>
-                                        <form action="{{ url('/dashboard', ['id' => $job->id]) }}" method="post">
+                                        <form action="{{ url('/jobs', ['id' => $job->id]) }}" method="post">
                                             @csrf
                                             @method('DELETE')
                                             <input class="btn btn-danger" type="submit" value="Delete" />
@@ -104,7 +104,7 @@
                                     <td>{{ $user->telefoonnummer }}</td>
                                     <td>{{ $user->email }}</td>
                                     <td>
-                                        <form action="{{ url('/dashboard', ['id' => $user->id]) }}" method="post">
+                                        <form action="{{ url('/user', ['id' => $user->id]) }}" method="post">
                                             @csrf
                                             @method('DELETE')
                                             <input class="btn btn-danger" type="submit" value="Delete" />
