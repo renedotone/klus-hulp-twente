@@ -77,27 +77,67 @@
     </div>
 </div>
 
-@foreach ($userblogposts as $userblogposts)
-<div class="container">
-    <div class="row">
-        <div class="col-sm mb-5 mt-5">
-            <div class="card w-100">
-                <div class="card-body">
-                    <h5 class="card-title">Het verhaal van {{ $userblogposts->naam_plaatser_blog }}</h5>
-                    <p class="card-text">Type hulpvraag: {{ $userblogposts->type_hulpvraag_blog }}</p>
-                    <p class="card-text">Ervaring: {{ $userblogposts->beschrijving_hulpvraag_blog }}</p>
-                    <form action="{{ url('/dashboard', ['id' => $userblogposts->id]) }}" method="post">
-                        @csrf
-                        @method('DELETE')
-                        <input class="btn btn-danger" type="submit" value="Delete" />
-                        <input type="hidden" name="_method" value="delete" />
-                    </form>
+<div class="col-md-12 mt-5 mb-5">
+    <div class="card">
+        <div class="card-header">This section details your USER BLOG POSTS</div>
+            <div class="card-body">
+                @foreach ($userblogposts as $userblogposts)
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm mb-5 mt-5">
+                            <div class="card w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Het verhaal van {{ $userblogposts->naam_plaatser_blog }}</h5>
+                                    <p class="card-text">Type hulpvraag: {{ $userblogposts->type_hulpvraag_blog }}</p>
+                                    <p class="card-text">Ervaring: {{ $userblogposts->beschrijving_hulpvraag_blog }}</p>
+                                    <form action="{{ url('/dashboard', ['id' => $userblogposts->id]) }}" method="post">
+                                        @csrf
+                                        @method('DELETE')
+                                        <input class="btn btn-danger" type="submit" value="Delete" />
+                                        <input type="hidden" name="_method" value="delete" />
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                @endforeach
             </div>
         </div>
     </div>
 </div>
-@endforeach
+
+<div class="col-md-12 mt-5 mb-5">
+    <div class="card">
+        <div class="card-header">This section details your USER RESPONSES</div>
+            <div class="card-body">
+                @foreach ($responses as $response)
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm mb-5 mt-5">
+                            <div class="card w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"> De reactie van {{ $response->naam_plaatser_response }}</h5>
+                                    <p class="card-text">Als reactie op: {{ $response->naam_plaatser_hulpvraag }}</p>
+                                    <p class="card-text">Reactie: {{ $response->bericht_plaatser_response }}</p>
+                                    <form action="{{ url('/jobdetail', ['id' => $response->id]) }}" method="post">
+                                        @csrf
+                                        @method('DELETE')
+                                        <input class="btn btn-danger" type="submit" value="Delete" />
+                                        <input type="hidden" name="_method" value="delete" />
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
 
 @endsection

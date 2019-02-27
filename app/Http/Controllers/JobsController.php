@@ -111,9 +111,7 @@ class JobsController extends Controller
         }
         else
         {
-
-                return redirect('/dashboard');
-
+            return redirect('/dashboard');
         }
     }
 
@@ -125,9 +123,8 @@ class JobsController extends Controller
      */
     public function destroy($id)
     {
-        $job = Jobs::findOrFail($id);
-        $job->delete();
-
+        $jobs = Jobs::findOrFail($id);
+        $jobs->delete();
 
         if(Auth::guard('admin')->check())
         {
@@ -135,25 +132,7 @@ class JobsController extends Controller
         }
         else
         {
-
-                return redirect('/dashboard');
-
+            return redirect('/dashboard');
         }
-
-
-
-        // if (Auth::guard('admin')) {
-        //     return redirect('/admin');
-        // }
-        // else
-        // {
-        //     return redirect()->action('App\Http\Controllers\DashboardController@index');
-        //     // ('/dashboard');
-        // }
-        // @if (Auth::guard('admin'))
-        //     return redirect('/admin');
-        // @else
-        //     return redirect('/dashboard');
-        // @endif
     }
 }

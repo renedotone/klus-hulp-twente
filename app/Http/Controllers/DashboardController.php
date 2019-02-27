@@ -7,6 +7,7 @@ use DB;
 use Auth;
 use App\Jobs;
 use App\Userblogposts;
+use App\Response;
 
 class DashboardController extends Controller
 {
@@ -30,10 +31,12 @@ class DashboardController extends Controller
         $id= Auth::user()->id;
         $jobs = DB::table('jobs')->where('id_plaatser', $id)->get();
         $userblogposts = DB::table('userblogposts')->where('id_plaatser_blog', $id)->get();
+        $response = DB::table('responses')->where('id_plaatser_response', $id)->get();
 
         return view('dashboard')
         ->with('jobs', $jobs)
-        ->with('userblogposts', $userblogposts);
+        ->with('userblogposts', $userblogposts)
+        ->with('responses', $response);
     }
 
         /**

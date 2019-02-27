@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Response;
 use App\Jobs;
+use Auth;
 
 class ResponseController extends Controller
 {
@@ -91,6 +92,17 @@ class ResponseController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $response = Response::findOrFail($id);
+        $response->delete();
+
+
+        if(Auth::guard('admin')->check()) 
+        {
+            return redirect('/admin');
+        } 
+        else 
+        {
+            return redirect('/dashboard');
+        }
     }
 }

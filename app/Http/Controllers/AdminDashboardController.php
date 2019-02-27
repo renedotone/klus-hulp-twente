@@ -7,6 +7,7 @@ use Auth;
 use App\Jobs;
 use App\Userblogposts;
 use App\User;
+use App\Response;
 
 class AdminDashboardController extends Controller
 {
@@ -31,10 +32,12 @@ class AdminDashboardController extends Controller
         $userblogposts = Userblogposts::all();
         $jobs = Jobs::all();
         $user = User::all();
+        $response = Response::all();;
         return view('admindashboard')
         ->with('jobs', $jobs)
         ->with('userblogposts', $userblogposts)
-        ->with('user', $user);
+        ->with('user', $user)
+        ->with('response', $response);
     }
 
     /**
