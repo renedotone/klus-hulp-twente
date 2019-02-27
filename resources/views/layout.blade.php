@@ -17,6 +17,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!-- TableSorter Javascript Library -->
 
+    @section('stylesheets')
+        <link href="{{ asset('css/layoutstyle.css') }}" rel="stylesheet" type="text/css" >
+    @show
 
     <title>@yield('title', 'Klus Hulp+Twente')</title>
     <link rel="icon" href="img/layout/klshlp3zw.png">

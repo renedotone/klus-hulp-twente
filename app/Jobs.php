@@ -8,6 +8,6 @@ class Jobs extends Model
 {
     public function response()
     {
-        return $this->hasMany(Response::class);
+        return $this->hasMany(Response::class, 'hulpvraag_id');
     }
 }
