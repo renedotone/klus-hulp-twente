@@ -19,6 +19,7 @@
 
 
     <title>@yield('title', 'Klus Hulp+Twente')</title>
+    <link rel="icon" href="img/layout/klshlp3zw.png">
 
   </head>
   <body>
