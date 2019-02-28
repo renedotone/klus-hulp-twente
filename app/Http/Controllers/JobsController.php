@@ -135,11 +135,9 @@ class JobsController extends Controller
         }
         else
         {
-
                 return redirect('/dashboard');
-
         }
-
+        
     
 
         // if (Auth::guard('admin')) {
@@ -157,12 +155,10 @@ class JobsController extends Controller
         // @endif
     }
 
-    public function search(Request $request, $id)
-    {
-        // dd('hello');
-        $jobs = Jobs::where($job->gemeente_plaatser);
+    public function search()
+    { 
+        $jobs = jobs::where('gemeente_plaatser', '=', '{{ $job->gemeente_plaatser }}')->get();
+        return view('jobs.jobs', compact('jobs')); 
 
     }
-
-
 }

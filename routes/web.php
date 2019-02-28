@@ -45,7 +45,7 @@ Route::view('/about', 'about');
 Route::view('/rules', 'rules');
 
 
-Route::post('/jobs', 'JobsController@search');
+Route::post('/jobs/search', 'JobsController@search');
 
 
 Route::prefix('admin')->group(function()
