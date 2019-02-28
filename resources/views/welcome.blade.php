@@ -44,7 +44,7 @@
 <div class="jumbotron jumbotron-fluid custom-jumbotron">
         {{-- <div class="container"> --}}
         
-            <div><img src="../img/layout/klshlp3zw.png"  </div>
+            <div><img src="../img/layout/klshlp6_ruw.png" width = 463px height = 418px> </div>
          
 </div>                    
 <div>                        
