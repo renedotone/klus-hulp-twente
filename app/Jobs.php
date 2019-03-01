@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Jobs extends Model
 {
-    public function response()
+    public function responses()
     {
-        return $this->hasMany(Response::class);
+        return $this->hasMany(Response::class, 'hulpvraag_id');
     }
 
     public function user()

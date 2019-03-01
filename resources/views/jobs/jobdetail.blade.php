@@ -70,7 +70,7 @@
         </div>
     </div>
 
-    @foreach ($response as $response)
+    @foreach ($job->responses as $response)
     <div class="container">
         <div class="row">
             <div class="col-sm mb-5 mt-5">
