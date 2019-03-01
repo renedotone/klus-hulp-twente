@@ -157,8 +157,14 @@ class JobsController extends Controller
 
     public function search()
     { 
-        $jobs = jobs::where('gemeente_plaatser', '=', '{{ $job->gemeente_plaatser }}')->get();
+       
+        $jobs = Jobs::where('gemeente_plaatser', "")->get();
+        
+        // $jobs = Jobs::whereHas('$JobsJobs', function ($query) {
+        //     $query->where('gemeente_plaatser', 'like', '');
+        // })->get();
+        
         return view('jobs.jobs', compact('jobs')); 
-
+         
     }
 }

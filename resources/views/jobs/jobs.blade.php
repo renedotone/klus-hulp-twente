@@ -13,46 +13,52 @@
             <div class="table-responsive">
                 <table id="jobsTable" class="table table-dark table-hover">
                     <thead>
-                    <tr>
-                        <th scope="col">Naam van de plaatser</th>
-                        <th scope="col">Type hulpvraag</th>
-                        <th scope="col">Beschrijving hulpvraag</th>
-                        <th scope="col">
+                        <tr>
+                            <th scope="col">Naam van de plaatser</th>
+                            <th scope="col">Type hulpvraag</th>
+                            <th scope="col">Beschrijving hulpvraag</th>
                             
-                            <form method="POST" action="/jobs/search">
-                                {{ csrf_field() }}
-                                <select class="form-control" name="gemeente_plaatser">
-                                    <option value="">Gemeente</option>
-                                    <option value="Enschede">Enschede</option>
-                                    <option value="Almelo">Almelo</option>
-                                    <option value="Borne">Borne</option>
-                                    <option value="Haaksbergen">Haaksbergen</option>
-                                    <option value="Hellendoorn">Hellendoorn</option>
-                                    <option value="Dinkelland">Dinkelland</option>
-                                    <option value="Hof van Twente">Hof van Twente</option>
-                                    <option value="Losser">Losser</option>
-                                    <option value="Oldenzaal">Oldenzaal</option>
-                                    <option value="Rijssen-Holten">Rijssen-Holten</option>
-                                    <option value="Tubbergen">Tubbergen</option>
-                                    <option value="Twenterand">Twenterand</option>
-                                    <option value="Wierden">Wierden</option>
-                                </select>
+                            <th scope="col">Gemeente</th>
+                            <th scope="col">Details</th>
+                        </tr>
 
-                                <button type="submit" class="btn btn-primary">Zoek</button>    
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                            <th scope="col"> 
+                                <form method="POST" action="/jobs/search">
+                                    {{ csrf_field() }}
+                                    <select class="form-control" name="gemeente_plaatser" selected="selected">
+                                        <option value="">Zoek op Gemeente</option>
+                                        <option value="Enschede">Enschede</option>
+                                        <option value="Almelo">Almelo</option>
+                                        <option value="Borne">Borne</option>
+                                        <option value="Haaksbergen">Haaksbergen</option>
+                                        <option value="Hellendoorn">Hellendoorn</option>
+                                        <option value="Dinkelland">Dinkelland</option>
+                                        <option value="Hof van Twente">Hof van Twente</option>
+                                        <option value="Losser">Losser</option>
+                                        <option value="Oldenzaal">Oldenzaal</option>
+                                        <option value="Rijssen-Holten">Rijssen-Holten</option>
+                                        <option value="Tubbergen">Tubbergen</option>
+                                        <option value="Twenterand">Twenterand</option>
+                                        <option value="Wierden">Wierden</option>
+                                    </select>
+                                </th>
+                                {{-- SELECT * FROM Jobs WHERE gemeente='Enschede'; --}}
+
+                                {{-- <select name="jobs" id="">
+                                    @foreach ($jobs as $job)
+                                        <option value="{{ $job->gemeente_plaatser }}" >{{ $job->gemeente_plaatser }}</option>
+                                    @endforeach --}}
+
+                                {{-- </select> --}}
+                                
+                            
+                            <th scope="col"><button type="submit" class="btn btn-primary">Zoek</button></th>
                             </form>
-                            
-                            {{-- SELECT * FROM Jobs WHERE gemeente='Enschede'; --}}
-
-                            {{-- <select name="jobs" id="">
-                                @foreach ($jobs as $job)
-                                    <option value="{{ $job->gemeente_plaatser }}" >{{ $job->gemeente_plaatser }}</option>
-                                @endforeach --}}
-
-                            {{-- </select> --}}
-                            
-                        </th>
-                        <th scope="col">Details</th>
-                    </tr>
+                        </tr>
                     </thead>
                      
                     
@@ -68,13 +74,11 @@
                     </tbody>
                     @endforeach
 
-
                 </table>
             </div>
         </div>
     </div>
 </div>
-
 
 @endsection
 
