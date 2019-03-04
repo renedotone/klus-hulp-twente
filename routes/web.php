@@ -47,6 +47,10 @@ Route::delete('/dashboard/{id}', 'UserblogpostsController@destroy')->name('userb
 Route::view('/about', 'about');
 Route::view('/rules', 'rules');
 
+
+Route::get('/jobs/search', 'JobsController@search');
+
+
 Route::prefix('admin')->group(function()
 {
     Route::get('/login', 'Auth\AdminLoginController@index')->name('admin.login');

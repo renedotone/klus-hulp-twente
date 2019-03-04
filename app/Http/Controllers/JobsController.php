@@ -134,4 +134,15 @@ class JobsController extends Controller
             return redirect('/dashboard');
         }
     }
+
+    public function search(Request $request)
+    { 
+        $search = $request->get('search');
+        $jobs =  Jobs::where('naam_plaatser', 'like', '%' .$search. '%')
+                ->orWhere('type_hulpvraag', 'like', '%' .$search. '%')
+                ->orWhere('beschrijving_hulpvraag', 'like', '%' .$search. '%')
+                ->orWhere('gemeente_plaatser', 'like', '%' .$search. '%')->paginate(25);
+        
+        return view('jobs.jobs', compact('jobs')); 
+    }
 }
