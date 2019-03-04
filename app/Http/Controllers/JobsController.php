@@ -64,11 +64,10 @@ class JobsController extends Controller
     public function show($id)
     {
         $job = Jobs::findOrFail($id);
-        $response = Response::where('hulpvraag_id',$job->id)->get();;
+        return view('jobs.jobdetail', compact('job'));
 
-        return view('jobs.jobdetail')
-        ->with('job', $job)
-        ->with('response', $response);
+
+
     }
 
     /**
@@ -111,9 +110,7 @@ class JobsController extends Controller
         }
         else
         {
-
-                return redirect('/dashboard');
-
+            return redirect('/dashboard');
         }
     }
 
@@ -125,9 +122,8 @@ class JobsController extends Controller
      */
     public function destroy($id)
     {
-        $job = Jobs::findOrFail($id);
-        $job->delete();
-
+        $jobs = Jobs::findOrFail($id);
+        $jobs->delete();
 
         if(Auth::guard('admin')->check())
         {
@@ -135,24 +131,8 @@ class JobsController extends Controller
         }
         else
         {
-                return redirect('/dashboard');
+            return redirect('/dashboard');
         }
-        
-    
-
-        // if (Auth::guard('admin')) {
-        //     return redirect('/admin');
-        // }
-        // else
-        // {
-        //     return redirect()->action('App\Http\Controllers\DashboardController@index');
-        //     // ('/dashboard');
-        // }
-        // @if (Auth::guard('admin'))
-        //     return redirect('/admin');
-        // @else
-        //     return redirect('/dashboard');
-        // @endif
     }
 
     public function search(Request $request)

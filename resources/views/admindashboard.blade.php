@@ -54,7 +54,7 @@
                                     <td>{{ $job->gemeente_plaatser }}</td>
                                     <td>{{ $job->telefoonnummer_plaatser }}</td>
                                     <td>
-                                        <form action="{{ url('/dashboard', ['id' => $job->id]) }}" method="post">
+                                        <form action="{{ url('/jobs', ['id' => $job->id]) }}" method="post">
                                             @csrf
                                             @method('DELETE')
                                             <input class="btn btn-danger" type="submit" value="Delete" />
@@ -104,7 +104,7 @@
                                     <td>{{ $user->telefoonnummer }}</td>
                                     <td>{{ $user->email }}</td>
                                     <td>
-                                        <form action="{{ url('/dashboard', ['id' => $user->id]) }}" method="post">
+                                        <form action="{{ url('/user', ['id' => $user->id]) }}" method="post">
                                             @csrf
                                             @method('DELETE')
                                             <input class="btn btn-danger" type="submit" value="Delete" />
@@ -143,6 +143,35 @@
                                                 <input class="btn btn-danger" type="submit" value="Delete" />
                                                 <input type="hidden" name="_method" value="delete" />
                                             </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12 mt-5 mb-5">
+            <div class="card">
+                <div class="card-header">This section details all USER RESPONSES</div>
+                <div class="card-body">
+                    @foreach ($response as $response)
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm mb-5 mt-5">
+                                <div class="card w-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title"> De reactie van {{ $response->naam_plaatser_response }}</h5>
+                                        <p class="card-text">Als reactie op: {{ $response->naam_plaatser_hulpvraag }}</p>
+                                        <p class="card-text">Reactie: {{ $response->bericht_plaatser_response }}</p>
+                                        <form action="{{ url('/jobdetail', ['id' => $response->id]) }}" method="post">
+                                            @csrf
+                                            @method('DELETE')
+                                            <input class="btn btn-danger" type="submit" value="Delete" />
+                                            <input type="hidden" name="_method" value="delete" />
+                                        </form>
                                     </div>
                                 </div>
                             </div>
