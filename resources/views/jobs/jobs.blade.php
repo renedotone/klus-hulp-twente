@@ -27,9 +27,23 @@
                             <th scope="col"></th>
                             <th scope="col"></th>
                             <th scope="col"> 
-                                <form method="POST" action="/jobs/search">
+                                <form action="/jobs/search" method="get">
                                     {{ csrf_field() }}
-                                    <select class="form-control" name="gemeente_plaatser" selected="selected">
+                                    <div class="form-group">
+                                        <input type="search" name="search" class="form-control">
+                            </th>      
+
+                            <th scope="col"><button type="submit" class="btn btn-primary">Zoek</button></th>
+                                    </div>
+                                </form>
+                        </tr>
+                    </thead>
+
+                                        {{-- <span class="form-group-btn">
+                                            <button type="submit"></button>
+                                        </span> --}}
+                                    
+                                    {{-- <select class="form-control" name="gemeente_plaatser" selected="selected">
                                         <option value="">Zoek op Gemeente</option>
                                         <option value="Enschede">Enschede</option>
                                         <option value="Almelo">Almelo</option>
@@ -44,8 +58,8 @@
                                         <option value="Tubbergen">Tubbergen</option>
                                         <option value="Twenterand">Twenterand</option>
                                         <option value="Wierden">Wierden</option>
-                                    </select>
-                                </th>
+                                    </select> --}}
+                                
                                 {{-- SELECT * FROM Jobs WHERE gemeente='Enschede'; --}}
 
                                 {{-- <select name="jobs" id="">
@@ -56,10 +70,7 @@
                                 {{-- </select> --}}
                                 
                             
-                            <th scope="col"><button type="submit" class="btn btn-primary">Zoek</button></th>
-                            </form>
-                        </tr>
-                    </thead>
+                            
                      
                     
                     @foreach ($jobs as $job)
