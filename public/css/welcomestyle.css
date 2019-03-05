@@ -11,15 +11,21 @@
 
 .custom-jumbotron
 {
+    margin-bottom: 0px;
+    padding-bottom: 200px;
     background-image: url("/img/welcome/gardeningbanner.jpeg");
+    background-position: 0% 80%;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-size: 100% 600px;
-    padding-left: 20%;
-    padding-right: 20%;
-    padding-top: 10%;
-    padding-bottom: 20%;
-    background-color: white;
+    color: white;
+    text-shadow: black 0.3em 0.3em 0.3em;
 }
+
+.custom-jumbotron
+{
+    
+}
+
 
 /* .custom-jumbotron:after {
     position: absolute;
@@ -31,11 +37,6 @@
     background: 
     linear-gradient(to left, rgba(11,83,95,0) 0%,rgba(11,83,95,0.65) 100%),
     linear-gradient(to right, rgba(11,83,95,0) 0%,rgba(11,83,95,0.65) 100%);
-} */
-
-/* .custom-card
-{
-    background-color: rgba(255, 255, 255, 0.3);
 } */
 
 .spacer200 
@@ -80,3 +81,7 @@
     margin-right: auto;
 }  
 
+.green-icon-color
+{
+    color:green;
+}
