@@ -1,11 +1,30 @@
-.center{
-    color: purple;
+ #jobsTable{
+    background-color: #003b59;
+} 
+
+.custom-jumbotron{
+    margin-bottom: 0px;
+    padding-bottom: 200px;
+    background-image: url("/img/jobs/home-improvement.jpeg");
+    background-position: 0% 80%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #003943;
+    text-shadow: #b0e4a6 0.1em 0.1em 0.1em;
 }
 
-#testing{
-    background-color: purple;
+#detailbtn{
+    background-color: #9cd5f6;
 }
 
-#jobsTable{
-    background-color: purple;
+#allbtn{
+    background-color: #b0e4a6;
+}
+
+#searchbtn{
+    background-color: #49c032;
+}
+
+#colname{
+    color: #9cd5f6;
 }
