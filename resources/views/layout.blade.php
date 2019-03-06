@@ -50,7 +50,7 @@
                         @endif
                     @else
                         <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle custom-navbar-link-text" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -71,6 +71,9 @@
         <nav class="navbar navbar-expand-lg custom-navbar-2">
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link custom-navbar-link-text" href="/">Home</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link custom-navbar-link-text" href="/rules">Hoe werkt het?</a>
                     </li>
@@ -115,7 +118,7 @@
         <div class="col-md-4 col-xl-5">
             <div class="pr-xl-4">
             <p>Iedereen kan wel wat hulp gebruiken.</p>
-            <p class="custom-footer-text"><span>©  </span><span class="copyright-year">2018</span><span> </span><span>Klus Hulp Twente</span><span>. </span><span>All Rights Reserved.</span></p>
+            <p class="custom-footer-text"><span>©  </span><span class="copyright-year">2019</span><span> </span><span>Klus Hulp Twente</span><span>. </span><span>All Rights Reserved.</span></p>
             <a class="nav-link custom-footer-text" href="/admin/login">ADMIN LOGIN</a>
             <a class="nav-link custom-footer-text" href="/admin">ADMIN PORTAL</a>
             </div>
