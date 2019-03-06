@@ -69,7 +69,7 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link custom-navbar-link-text" href="/rules">Spelregels</a>
+                        <a class="nav-link custom-navbar-link-text" href="/rules">Hoe werkt het?</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link custom-navbar-link-text" href="/addingjobs">Klus toevoegen</a>
@@ -87,9 +87,8 @@
                             Tools
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">calculator 1</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">calculator 2</a>
+                            <a class="dropdown-item" href="https://poolconfigurator.herokuapp.com" target="_blank">Zwembad configurator</a>
+                            {{-- <div class="dropdown-divider"></div> --}}
                         </div>
                     </li>
                     <li class="nav-item">

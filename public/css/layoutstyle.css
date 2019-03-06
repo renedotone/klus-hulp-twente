@@ -64,6 +64,11 @@ a:hover
     margin-top: 200px;
 }
 
+.spacer150top 
+{
+    margin-top: 150px;
+}
+
 @media (min-width: 992px){
     .custom-navbar-1 {
         padding-left : 20em;
