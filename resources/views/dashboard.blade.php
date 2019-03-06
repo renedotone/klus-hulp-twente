@@ -53,7 +53,7 @@
                         <th scope="col">Edit</th>
                     </tr>
                     </thead>
-                    @foreach ($jobs as $job)
+                    @foreach ($user->jobs as $job)
                     <tbody>
                     <tr>
                         <td>{{ $job->naam_plaatser }}</td>
@@ -92,10 +92,11 @@
     <div class="card shadow-lg">
         <div class="card-header">This section details your USER BLOG POSTS</div>
             <div class="card-body">
-                @foreach ($userblogposts as $userblogposts)
-
-                        <div class="col-sm mb-2 mt-2">
-                            <div class="card text-white bg-dark mb-3">
+                @foreach ($user->userblogposts as $userblogposts)
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm mb-5 mt-5">
+                            <div class="card w-100">
                                 <div class="card-body">
                                     <h5 class="card-title">Het verhaal van {{ $userblogposts->naam_plaatser_blog }}</h5>
                                     <p class="card-text">Type hulpvraag: {{ $userblogposts->type_hulpvraag_blog }}</p>
@@ -120,7 +121,7 @@
     <div class="card shadow-lg">
         <div class="card-header">This section details your USER RESPONSES</div>
             <div class="card-body">
-                @foreach ($responses as $response)
+                @foreach ($user->responses as $response)
                 <div class="container">
                     <div class="row">
                         <div class="col-sm mb-5 mt-5">

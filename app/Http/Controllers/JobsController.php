@@ -64,12 +64,8 @@ class JobsController extends Controller
     public function show($id)
     {
         $job = Jobs::findOrFail($id);
-        // $response = Response::where('hulpvraag_id',$job->id)->get();;
-        $response = $job->response()->get();
+        return view('jobs.jobdetail', compact('job'));
 
-        return view('jobs.jobdetail')
-        ->with('job', $job)
-        ->with('response', $response);
     }
 
     /**
@@ -135,5 +131,16 @@ class JobsController extends Controller
         {
             return redirect('/dashboard');
         }
+    }
+
+    public function search(Request $request)
+    { 
+        $search = $request->get('search');
+        $jobs =  Jobs::where('naam_plaatser', 'like', '%' .$search. '%')
+                ->orWhere('type_hulpvraag', 'like', '%' .$search. '%')
+                ->orWhere('beschrijving_hulpvraag', 'like', '%' .$search. '%')
+                ->orWhere('gemeente_plaatser', 'like', '%' .$search. '%')->paginate(25);
+        
+        return view('jobs.jobs', compact('jobs')); 
     }
 }
