@@ -137,7 +137,7 @@ class JobsController extends Controller
 
     public function search(Request $request)
     { 
-        $search = $request->get('search');
+        $search = $request->get(strtolower('search'));
         $jobs =  Jobs::where('naam_plaatser', 'like', '%' .$search. '%')
                 ->orWhere('type_hulpvraag', 'like', '%' .$search. '%')
                 ->orWhere('beschrijving_hulpvraag', 'like', '%' .$search. '%')
