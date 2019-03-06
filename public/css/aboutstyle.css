@@ -1,0 +1,61 @@
+body{
+    background-color: #f4f7f7;
+}
+
+.custom-jumbotron{
+    margin-bottom: 0px;
+    padding-bottom: 200px;
+    background-image: url("/img/about/laptop.jpeg"); 
+    background-position: 0% 80%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #005c8b;
+    text-shadow: #9cd5f6 0.1em 0.1em 0.1em;
+}
+
+.container-fluid{
+    margin-top: 30px;
+}
+
+.grid { 
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 2fr));
+    grid-gap: 30px;
+    align-items: stretch;
+    }
+
+  .grid > article {
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+  }
+
+  .grid > article img {
+    max-width: 100%;
+  }
+
+  .text {
+    padding: 0 20px 20px;
+  }
+
+  .card-title{
+    margin-top: 10px;
+    color: #005c8b;
+  }
+
+  #github{
+    padding-left: 50px;
+    color: #005c8b;
+  }
+
+  #linkedin{
+    padding-left: 20px;
+    color: #005c8b;
+  }
+
+  #linkedin:hover{
+    color: #9cd5f6;
+  }
+
+  #github:hover{
+    color: #9cd5f6;
+  }
