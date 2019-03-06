@@ -18,49 +18,31 @@
     <!-- TableSorter Javascript Library -->
 
 
-    <title>@yield('title', 'Klus Hulp+Twente')</title>
+    <title>@yield('title', 'Klus Hulp Twente')</title>
     <link rel="icon" href="img/layout/klshlp3zw.png">
 
   </head>
   <body>
-      {{-- <h1 class="title">test</h1> --}}
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="/"><img src="../img/layout/klshlp6_ruw.png" width =50px height=50px alt=""></a>
+        <nav class="navbar navbar-expand-lg custom-navbar-1">
+            <a class="navbar-brand custom-navbar-brand-text" href="/">
+                <img src="../img/layout/klshlp6_ruw.png" width =50px height=50px alt="">
+                Klus Hulp Twente
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <i class="fas fa-bars"></i>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/about">Over ons</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/rules">Spelregels</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/userblogposts">Succesverhalen</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/jobs">Openstaande klussen</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/addingjobs">Voeg een klus toe</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/dashboard">Mijn klusportaal</a>
-                    </li>
-                </ul>
                 <ul class="navbar-nav ml-auto">
                     <!-- Authentication Links -->
                     @guest
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            <a class="nav-link custom-navbar-link-text" href="{{ route('login') }}">{{ __('Login') }}</a>
                         </li>
                         @if (Route::has('register'))
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                <a class="nav-link custom-navbar-link-text" href="{{ route('register') }}">{{ __('Register') }}</a>
                             </li>
                         @endif
                     @else
@@ -79,9 +61,42 @@
                                 </form>
                             </div>
                         </li>
-
                     @endguest
-
+                </ul>
+            </div>
+        </nav>
+        <nav class="navbar navbar-expand-lg custom-navbar-2">
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link custom-navbar-link-text" href="/rules">Hoe werkt het?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-navbar-link-text" href="/addingjobs">Klus toevoegen</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-navbar-link-text" href="/userblogposts">Succesverhalen</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link custom-navbar-link-text" href="/jobs">Openstaande klussen</a>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle custom-navbar-link-text" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Tools
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="https://poolconfigurator.herokuapp.com" target="_blank">Zwembad configurator</a>
+                            {{-- <div class="dropdown-divider"></div> --}}
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-navbar-link-text" href="/about">Over ons</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-navbar-link-text" href="/dashboard">Mijn klusportaal</a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -91,36 +106,36 @@
 
   @yield('content')
 
-<footer class="" style="background-color: #A1BEDA;">
+<footer class="custom-footer spacer200top">
     <div class="container">
         <div class="row mt-5 pt-5 pb-5">
         <div class="col-md-4 col-xl-5">
             <div class="pr-xl-4">
             <p>Iedereen kan wel wat hulp gebruiken.</p>
-            <p class="rights"><span>©  </span><span class="copyright-year">2018</span><span> </span><span>Klus Hulp Twente</span><span>. </span><span>All Rights Reserved.</span></p>
-            <a class="nav-link" href="/admin/login">ADMIN LOGIN</a>
-            <a class="nav-link" href="/admin">ADMIN PORTAL</a>
+            <p class="custom-footer-text"><span>©  </span><span class="copyright-year">2018</span><span> </span><span>Klus Hulp Twente</span><span>. </span><span>All Rights Reserved.</span></p>
+            <a class="nav-link custom-footer-text" href="/admin/login">ADMIN LOGIN</a>
+            <a class="nav-link custom-footer-text" href="/admin">ADMIN PORTAL</a>
             </div>
         </div>
         <div class="col-md-4">
             <h5>Contact</h5>
-            <dl class="contact-list">
+            <dl class="custom-footer-text">
             <dt>Email:</dt>
-            <dd><a href="mailto:#">KlusHulpTwente@hotmail.com</a></dd>
+            <dd><a class="custom-footer-text" href="mailto:#">KlusHulpTwente@hotmail.com</a></dd>
             </dl>
-            <dl class="contact-list">
+            <dl class="custom-footer-text">
             <dt>Telefoon:</dt>
-            <dd><a href="tel:#">053-477 555 555</a>
+            <dd>053-477 555 555
             </dd>
             </dl>
         </div>
         <div class="col-md-4 col-xl-3">
             <h5>Links</h5>
             <ul class="nav-list">
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Linkedin</a></li>
+            <li><a class="custom-footer-text" href="#">Facebook</a></li>
+            <li><a class="custom-footer-text" href="#">Instagram</a></li>
+            <li><a class="custom-footer-text" href="#">Twitter</a></li>
+            <li><a class="custom-footer-text" href="#">Linkedin</a></li>
             </ul>
         </div>
         </div>
