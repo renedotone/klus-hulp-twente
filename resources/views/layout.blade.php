@@ -25,7 +25,7 @@
     <link rel="icon" href="img/layout/klshlp3zw.png">
 
   </head>
-  <body>
+<body>
     <header>
         <nav class="navbar navbar-expand-lg custom-navbar-1">
             <a class="navbar-brand custom-navbar-brand-text" href="/">
@@ -65,6 +65,9 @@
                             </div>
                         </li>
                     @endguest
+                        <li class="nav-item">
+                            <a class="nav-link custom-navbar-link-text" href="/dashboard">Mijn klusportaal</a>
+                        </li>
                 </ul>
             </div>
         </nav>
@@ -78,14 +81,14 @@
                         <a class="nav-link custom-navbar-link-text" href="/rules">Hoe werkt het?</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link custom-navbar-link-text" href="/addingjobs">Klus toevoegen</a>
+                        <a class="nav-link custom-navbar-link-text" href="/addingjobs">Klus plaatsen</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link custom-navbar-link-text" href="/userblogposts">Succesverhalen</a>
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link custom-navbar-link-text" href="/jobs">Openstaande klussen</a>
+                        <a class="nav-link custom-navbar-link-text" href="/jobs">Klusaanbod</a>
                     </li>
                     
                     <li class="nav-item dropdown">
@@ -94,14 +97,10 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="https://poolconfigurator.herokuapp.com" target="_blank">Zwembad configurator</a>
-                            {{-- <div class="dropdown-divider"></div> --}}
                         </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link custom-navbar-link-text" href="/about">Over ons</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link custom-navbar-link-text" href="/dashboard">Mijn klusportaal</a>
                     </li>
                 </ul>
             </div>
@@ -109,41 +108,34 @@
     </header>
 
 
+@yield('content')
 
-  @yield('content')
 
 <footer class="custom-footer spacer200top">
     <div class="container">
-        <div class="row mt-5 pt-5 pb-5">
-        <div class="col-md-4 col-xl-5">
-            <div class="pr-xl-4">
-            <p>Iedereen kan wel wat hulp gebruiken.</p>
-            <p class="custom-footer-text"><span>©  </span><span class="copyright-year">2019</span><span> </span><span>Klus Hulp Twente</span><span>. </span><span>All Rights Reserved.</span></p>
-            <a class="nav-link custom-footer-text" href="/admin/login">ADMIN LOGIN</a>
-            <a class="nav-link custom-footer-text" href="/admin">ADMIN PORTAL</a>
+        <div class="row mt-5 pt-4 pb-3">
+            <div class="col-md-4 col-xl-5">
+                <div class="pr-xl-4">
+                <p>Iedereen kan wel wat hulp gebruiken.</p>
+                <p class="custom-footer-text"><span>©  </span><span class="copyright-year">2019</span><span> </span><span>Klus Hulp Twente</span><span>. </span><span>All Rights Reserved.</span></p>
+                </div>
             </div>
-        </div>
-        <div class="col-md-4">
-            <h5>Contact</h5>
-            <dl class="custom-footer-text">
-            <dt>Email:</dt>
-            <dd><a class="custom-footer-text" href="mailto:#">KlusHulpTwente@hotmail.com</a></dd>
-            </dl>
-            <dl class="custom-footer-text">
-            <dt>Telefoon:</dt>
-            <dd>053-477 555 555
-            </dd>
-            </dl>
-        </div>
-        <div class="col-md-4 col-xl-3">
-            <h5>Links</h5>
-            <ul class="nav-list">
-            <li><a class="custom-footer-text" href="#">Facebook</a></li>
-            <li><a class="custom-footer-text" href="#">Instagram</a></li>
-            <li><a class="custom-footer-text" href="#">Twitter</a></li>
-            <li><a class="custom-footer-text" href="#">Linkedin</a></li>
-            </ul>
-        </div>
+            <div class="col-md-4">
+                <div class="pr-xl-4">
+                    <p id="socialgroup"> <a id="social" href="https://www.facebook.com/" class="fab fa-facebook fa-lg"></a>
+                        <a id="social" href="https://www.instagram.com/" class="fab fa-instagram fa-lg"></a>
+                        <a id="social" href="https://twitter.com/" class="fab fa-twitter fa-lg"></a>
+                        <a id="social" href="https://www.linkedin.com/" class="fab fa-linkedin fa-lg"></a>
+                    </p>
+                    <p>    
+                        <a id="social" class="custom-footer-text" href="mailto:#">info@klushulptwente.nl</a>
+                    </p>
+                </div>      
+            </div> 
+            <div class="col-md-4 col-xl-3">
+                <a class="nav-link custom-footer-text" href="/admin/login">ADMIN LOGIN</a>
+                <a class="nav-link custom-footer-text" href="/admin">ADMIN PORTAL</a>
+            </div>
         </div>
     </div>
 </footer>
@@ -154,4 +146,4 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
-  </body>
+</body>

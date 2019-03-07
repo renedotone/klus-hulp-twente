@@ -5,16 +5,12 @@ html
 
 .custom-navbar-1
 {
-    /* padding-left: 400px;
-    padding-right: 400px; */
     padding-top: 25px;
     background-color: #0389ce;
 }
 
 .custom-navbar-2
 {
-    /* padding-left: 400px;
-    padding-right: 400px; */
     padding-top: 12px;
     padding-bottom: 12px;
     background-color: #005c8b;
@@ -58,7 +54,6 @@ a:hover
 .fas
 {
     color: white;
-    /* padding-top: 5px; */
     border: 1px solid white;
     border-radius: .25rem;
     padding: .25rem .75rem;
@@ -67,11 +62,6 @@ a:hover
 .spacer200top 
 {
     margin-top: 200px;
-}
-
-.spacer150top 
-{
-    margin-top: 150px;
 }
 
 @media (min-width: 992px){
@@ -87,3 +77,16 @@ a:hover
         padding-right : 20em;
     }
 }
+
+#socialgroup{
+    padding-left: 15px;
+}
+#social{
+   color: white;
+   padding-left: 10px;
+}
+
+#social:hover{
+    color: #0389ce;
+    text-decoration: none;
+ }
