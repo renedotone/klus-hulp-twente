@@ -17,6 +17,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!-- TableSorter Javascript Library -->
 
+    @section('stylesheets')
+        <link href="{{ asset('css/layoutstyle.css') }}" rel="stylesheet" type="text/css" >
+    @show
 
     <title>@yield('title', 'Klus Hulp Twente')</title>
     <link rel="icon" href="img/layout/klshlp3zw.png">
@@ -47,7 +50,7 @@
                         @endif
                     @else
                         <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle custom-navbar-link-text" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -68,6 +71,9 @@
         <nav class="navbar navbar-expand-lg custom-navbar-2">
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link custom-navbar-link-text" href="/">Home</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link custom-navbar-link-text" href="/rules">Hoe werkt het?</a>
                     </li>
@@ -112,7 +118,7 @@
         <div class="col-md-4 col-xl-5">
             <div class="pr-xl-4">
             <p>Iedereen kan wel wat hulp gebruiken.</p>
-            <p class="custom-footer-text"><span>©  </span><span class="copyright-year">2018</span><span> </span><span>Klus Hulp Twente</span><span>. </span><span>All Rights Reserved.</span></p>
+            <p class="custom-footer-text"><span>©  </span><span class="copyright-year">2019</span><span> </span><span>Klus Hulp Twente</span><span>. </span><span>All Rights Reserved.</span></p>
             <a class="nav-link custom-footer-text" href="/admin/login">ADMIN LOGIN</a>
             <a class="nav-link custom-footer-text" href="/admin">ADMIN PORTAL</a>
             </div>
