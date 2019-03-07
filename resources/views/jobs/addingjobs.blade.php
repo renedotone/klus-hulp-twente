@@ -3,8 +3,12 @@
 @section('title', 'List of Jobs')
 
 @section('content')
+<head>
+    <!-- My own CSS -->
+    <link href="{{ asset('css/addingjobsstyle.css') }}" rel="stylesheet" type="text/css" >
+</head>
 
-<div class="container">
+<div class="container spacer200">
   
     <h1 class="title">U kunt hier uw klusvraag toevoegen</h1>
     
